@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/default.js"></script>
+
+    <script type="text/javascript">
+        // query string: ?id=SqGrid_chart_no
+        var str = getParameterByName('id');
+        var array = str.split("_");
+        
+         var SqGrid =array[0]; // SqGrid
+         var ChartNo = array[1]; // ChartNo
+            
+    </script>
+
+
+
+</head>
+<body>
+    <form method="post" id="fm">
+        <input type="hidden" value="" name="SqGrid" id="SqGrid" />
+        <input type="hidden" value="" name="ChartNo" id="ChartNo" />
+        <input type="hidden" value="" name="OutpatientSn" id="OutpatientSn" />
+        <input type="hidden" value="" name="PatientName" id="PatientName" />
+        <input type="hidden" value="" name="MainDrNo" id="MainDrNo" />
+        <input type="hidden" value="" name="QuestId" id="QuestId" />
+        <input type="hidden" value="" name="IpAddress" id="IpAddress" />
+        <input type="hidden" value="" name="PatientRelationType" id="PatientRelationType" />
+
+    </form>
+
+    <script type="text/javascript">
+
+        $.ajax({
+            type: "POST",
+            async: false,
+            contentType: "application/json; charset=utf-8",
+           // url: "ServicePortal.asmx/Routing",
+            url: "ServicePortal.asmx/ProdRouting",
+            dataType: "json",
+            data: JSON.stringify({ SqGrid: SqGrid, ChartNo: ChartNo }),
+            success: function (data) {
+
+                var json = $.parseJSON(data.d);
+                $(json).each(function (i, val) {
+                    $.each(val, function (k, v) {
+                        $('#' + k + '').val($.trim(v));
+                    });
+                });
+
+                var url = "Surveys/" + $('#QuestId').val() + ".aspx";
+                //依據SqGrid導頁到對應的問卷
+                $('#fm').attr('action', url);
+                $('#fm').submit();
+
+
+            }
+        });
+    </script>
+
+</body>
+</html>

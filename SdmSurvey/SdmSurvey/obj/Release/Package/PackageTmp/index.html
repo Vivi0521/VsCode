@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" charset="utf-8" >
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9" />
+    <title>SDM收案系統</title>
+    <script type="text/javascript" src="Scripts/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.qrcode.min.js"></script>
+    <script type="text/javascript">
+
+
+        function editSurvey() {
+            $.ajax({
+                type: "POST",
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                url: "ServicePortal.asmx/ProdRouting",
+                //url: "ServicePortal.asmx/Routing",
+                dataType: "json",
+                //data: "{'SqGrid':" + $('#p_sqGrid').val() + "}",
+                data: JSON.stringify({ SqGrid: $('#p_sqGrid').val(), ChartNo: $('#p_chartNo').val() }),
+                success: function (data) {
+
+                    var json = $.parseJSON(data.d);
+                    $(json).each(function (i, val) {
+                        $.each(val, function (k, v) {
+                            $('#' + k + '').val($.trim(v));
+                        });
+                    });
+
+                    var url = "Surveys/" + $('#QuestId').val() + ".aspx";
+
+                    //依據SqGrid導頁到對應的問卷
+                    $('#fm').attr('action', url);
+                    $('#fm').submit();
+
+
+                }
+            });
+        }
+        /*
+        function createSurvey() {
+
+            //var inputObject = {
+            //   // SqGrid :1,
+            //    ChartNo : $('#c_ChartNo').val(),
+            //    OutpatientSn : $('#c_OutpatientSn').val(),
+            //    MainDrNo : $('#c_MainDrNo').val(),
+            //    QuestId: $('#c_QuestId').val()
+            //    //,
+            //    //PatientRelationType : "",
+            //    //IpAddress : ""
+            //};
+            //$.ajax({
+            //    type: "POST",
+            //    url: "Service1.asmx/CreateSDMQ",
+            //    contentType: "application/json; charset=utf-8",
+            //    data: JSON.stringify({input: inputObject}),
+            //    dataType: "json",
+            //    success: function (data) {
+            //        alert(data.d);
+            //    }
+            //});
+            //}
+            //var urls = "http://hisweb.hosp.ncku/HISService/Common/MobileService/basic/User.svc/CreateSDMQ";
+
+            var urls = "http://localhost:64632/MobileService/basic/User.svc/CreateSDMQ";
+            urls += "/" + $('#c_QuestId').val();
+            urls += "/" + $('#c_OutpatientSn').val();
+            urls += "/" + $('#c_MainDrNo').val();
+            urls += "/" + $('#c_ChartNo').val();
+
+            //alert(urls);
+            $.ajax(
+                type: "GET",
+                url: urls,
+                async: true,
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                data: "",
+                dataType: "text",
+                success: function (data) {
+                    alert('here');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert("ERROR:" + jqXHR.responseText);
+                }
+
+                });
+
+            }
+
+*/
+        $(function () {
+            $('#btnC').click(function () {
+
+                /*
+                var inputObject = {
+                    // SqGrid :1,
+                    ChartNo: $('#c_ChartNo').val(),
+                    OutpatientSn: $('#c_OutpatientSn').val(),
+                    MainDrNo: $('#c_MainDrNo').val(),
+                    QuestId: $('#c_QuestId').val()
+                    //,
+                    //PatientRelationType : "",
+                    //IpAddress : ""
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "Service1.asmx/CreateSDMQ",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({ input: inputObject }),
+                    dataType: "text",
+                    success: function (data) {
+                        alert(text);
+                    }
+                });
+                */
+
+
+                var urls = "http://hisweb.hosp.ncku/HISService/Common/MobileService/basic/User.svc/CreateSDMQ";
+                //var urls = "http://localhost:64632/MobileService/basic/User.svc/CreateSDMQ";
+                urls += "/" + $('#c_QuestId').val();
+                urls += "/" + $('#c_OutpatientSn').val();
+                urls += "/" + $('#c_MainDrNo').val();
+                urls += "/" + $('#c_ChartNo').val();
+
+                $.ajax({
+                    type: "GET",
+                    url: urls,
+                    async: true,
+                    crossDomain: true,
+                    //headers: {
+                    //    'Access-Control-Allow-Origin': '*'
+                    //},
+                    contentType: "application/json; charset=utf-8",
+                    data: "",
+                    dataType: "text",
+                    success: function (data) {
+                        var surveyKey = data;
+                        //var host =  "https://www.hosp.ncku.edu.tw/External/SDM/Internal/Cake.html?id=";  //pord
+                        var host = "http://localhost/SDM/Cake.html?id=";   //dev
+                        var url = host + surveyKey;
+                        $('#qrcode-size').qrcode({
+                            width: 120,
+                            height: 120,
+                            text: url
+                        });
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert("ERROR:" + jqXHR.responseText);
+                    }
+                });
+
+            });
+
+        });
+
+
+
+
+
+
+
+/**/</script>
+
+
+
+</head>
+<body>
+    <div>
+        <p>填寫問卷:</p>
+        <ol>
+            <li>
+                病歷號碼:
+                <input type="text" name="c_ChartNo" id="c_ChartNo" style="width:100px;" value="15207520" /> /
+                SDM問卷代號 :
+                <input type="text" name="c_QuestId" id="c_QuestId" style="width:50px;" value="SDM0A1" /> /
+                住院/門診號:
+                <input type="text" name="c_OutpatientSn" id="c_OutpatientSn" style="width:100px;" value="O20190109002237" /> /
+                醫師工號:
+                <input type="text" name="c_MainDrNo" id="c_MainDrNo" style="width:70px;" value="998792" />
+                <input type="button" id="btnC" name="btnC" value="Create Key" /> <br>
+                <div id="qrcode-size"></div>
+
+
+            </li>
+        </ol>
+
+        <ol>
+            <li>
+                SqGrid:
+                <input type="text" id="p_sqGrid" name="p_sqGrid" />
+                ChartNo:
+                <input type="text" id="p_chartNo" name="p_chartNo" />
+                <input type="button" id="btnJson" name="btnJson" value="開啟問卷" onclick="editSurvey();" />
+            </li>
+        </ol>
+
+
+        <p>檢示問卷:</p>
+        <ol>
+            <li>
+                SqGrid:
+                <input type="text" id="v_sqGrid" name="v_sqGrid" />
+                <input type="button" id="btnView" name="btnView" value="檢示問卷" onclick="viewSurvey();" />
+            </li>
+        </ol>
+    </div>
+
+    <form method="post" id="fm">
+        <input type="hidden" value="" name="SqGrid" id="SqGrid" />
+        <input type="hidden" value="" name="ChartNo" id="ChartNo" />
+        <input type="hidden" value="" name="OutpatientSn" id="OutpatientSn" />
+        <input type="hidden" value="" name="PatientName" id="PatientName" />
+        <input type="hidden" value="" name="MainDrNo" id="MainDrNo" />
+        <input type="hidden" value="" name="QuestId" id="QuestId" />
+        <input type="hidden" value="" name="IpAddress" id="IpAddress" />
+        <input type="hidden" value="" name="PatientRelationType" id="PatientRelationType" />
+
+    </form>
+
+ 
+
+</body>
+</html>

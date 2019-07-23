@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案由您的 Web 專案發佈/封裝處理序使用。您可以藉由編輯此 MSBuild 檔案，
+自訂此處理序的行為。若要深入了解，請前往 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\pub_vs\SDM</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/SdmSurvey.dll">
+      <publishTime>07/08/2019 09:04:46</publishTime>
+    </File>
+    <File Include="bin/SdmSurvey.pdb">
+      <publishTime>07/08/2019 09:04:46</publishTime>
+    </File>
+    <File Include="Cake.html">
+      <publishTime>07/03/2019 10:45:57</publishTime>
+    </File>
+    <File Include="Close.html">
+      <publishTime>05/30/2019 11:13:09</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.InPatient.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.OperationRoomStatus.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.OP_User.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.Patient.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.RegisterData.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.Surgery_Room.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="Connected Services/ServiceReference/SdmSurvey.ServiceReference.Surgery_Schedule.datasource">
+      <publishTime>06/25/2019 17:14:37</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/29/2019 11:36:16</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>07/08/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Resource/assets/css/font-awesome.min.css">
+      <publishTime>05/29/2019 14:02:50</publishTime>
+    </File>
+    <File Include="Resource/assets/css/ie8.css">
+      <publishTime>05/29/2019 14:02:50</publishTime>
+    </File>
+    <File Include="Resource/assets/css/ie9.css">
+      <publishTime>05/29/2019 14:02:50</publishTime>
+    </File>
+    <File Include="Resource/assets/css/inputNumber.css">
+      <publishTime>05/29/2019 14:02:50</publishTime>
+    </File>
+    <File Include="Resource/assets/css/main.css">
+      <publishTime>05/29/2019 14:02:50</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/fontawesome-webfont.eot">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/fontawesome-webfont.svg">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/fontawesome-webfont.woff">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/fonts/FontAwesome.otf">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/ie/html5shiv.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/ie/jquery.inputNumber.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/ie/jquery.mousewheel.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/ie/respond.min.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/jquery.min.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/main.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/skel.min.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/js/util.js">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/base/_page.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/base/_typography.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_box.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_button.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_form.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_icon.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_image.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_list.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_section.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_table.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/components/_tiles.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/ie8.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/ie9.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/layout/_footer.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/layout/_header.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/layout/_main.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/layout/_menu.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/layout/_wrapper.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/libs/_functions.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/libs/_mixins.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/libs/_skel.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/libs/_vars.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/assets/sass/main.scss">
+      <publishTime>05/29/2019 14:02:51</publishTime>
+    </File>
+    <File Include="Resource/images/a.jpg">
+      <publishTime>05/29/2019 14:02:37</publishTime>
+    </File>
+    <File Include="Resource/images/a_1.jpg">
+      <publishTime>05/29/2019 14:02:37</publishTime>
+    </File>
+    <File Include="Resource/images/b.jpg">
+      <publishTime>05/29/2019 14:02:37</publishTime>
+    </File>
+    <File Include="Resource/images/b_1.jpg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/b_2.jpg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/c.jpg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_chinese.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_chinese.svg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_hakka.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_hakka.svg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_taiwanese.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/CAD_taiwanese.svg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/c_1.jpg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/c_2.jpg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/feedback.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/feedback.svg">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/RF_01.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Resource/images/RF_02.png">
+      <publishTime>05/29/2019 14:02:38</publishTime>
+    </File>
+    <File Include="Scripts/default.js">
+      <publishTime>05/29/2019 09:55:54</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>05/29/2019 09:55:54</publishTime>
+    </File>
+    <File Include="Scripts/jquery.qrcode.min.js">
+      <publishTime>06/26/2019 16:49:23</publishTime>
+    </File>
+    <File Include="Service1.asmx">
+      <publishTime>05/29/2019 09:54:41</publishTime>
+    </File>
+    <File Include="ServicePortal.asmx">
+      <publishTime>06/27/2019 10:38:30</publishTime>
+    </File>
+    <File Include="Surveys/SDM041.aspx">
+      <publishTime>06/14/2019 17:08:51</publishTime>
+    </File>
+    <File Include="Surveys/SDM041_Handler.ashx">
+      <publishTime>06/04/2019 15:46:25</publishTime>
+    </File>
+    <File Include="Surveys/SDM091.aspx">
+      <publishTime>06/14/2019 17:08:55</publishTime>
+    </File>
+    <File Include="Surveys/SDM091_Handler.ashx">
+      <publishTime>06/04/2019 15:52:14</publishTime>
+    </File>
+    <File Include="Surveys/SDM0A1.aspx">
+      <publishTime>06/14/2019 17:08:55</publishTime>
+    </File>
+    <File Include="Surveys/SDM0A1_Handler.ashx">
+      <publishTime>05/31/2019 15:17:59</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/08/2019 09:04:46</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

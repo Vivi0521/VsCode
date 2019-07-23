@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="User" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://hc-ap6.hosp.ncku/HISService/Common/MobileService/basic/User.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://hc-ap6.hosp.ncku/HISService/Common/MobileService/basic/User.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://hc-ap6.hosp.ncku/HISService/Common/MobileService/basic/User.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUser_QueryAnesPreEvalList_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAnesPreEvalList" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryAnesPreEvalList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAnesPreEvalListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertAnesPreEvalCheckInTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAnesPreEvalCheckInTime" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertAnesPreEvalCheckInTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAnesPreEvalCheckInTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertPCSGatewayOne_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPCSGatewayOne" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertPCSGatewayOne_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPCSGatewayOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryOpRoomReservationforAnesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOpRoomReservationforAnesList" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryOpRoomReservationforAnesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryOpRoomReservationforAnesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertPCSGatewayAnes_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPCSGatewayAnes" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertPCSGatewayAnes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPCSGatewayAnesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_createSDMQ_InputMessage">
+    <wsdl:part name="parameters" element="tns:createSDMQ" />
+  </wsdl:message>
+  <wsdl:message name="IUser_createSDMQ_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createSDMQResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_NursingRecordApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:NursingRecordApi" />
+  </wsdl:message>
+  <wsdl:message name="IUser_NursingRecordApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NursingRecordApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DialysisRecordApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:DialysisRecordApi" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DialysisRecordApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DialysisRecordApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DialysisRecordApi_HTML_InputMessage">
+    <wsdl:part name="parameters" element="tns:DialysisRecordApi_HTML" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DialysisRecordApi_HTML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DialysisRecordApi_HTMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertAP_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAP" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertAP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWeight" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetYueKangServerIPfromConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetYueKangServerIPfromConfig" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetYueKangServerIPfromConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetYueKangServerIPfromConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_TurnDataBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:TurnDataBatch" />
+  </wsdl:message>
+  <wsdl:message name="IUser_TurnDataBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TurnDataBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_all_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_all" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_all_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_allResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_stationORchartno_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_stationORchartno" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_stationORchartno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_stationORchartnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_bydate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_bydate" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_bydate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_bydateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_bydate_station_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_bydate_station" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientSchedule_bydate_station_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientSchedule_bydate_stationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientData_chartno_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientData_chartno" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResPatientData_chartno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResPatientData_chartnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DoPost_ResCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoPost_ResCase" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DoPost_ResCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoPost_ResCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DoPut_ResCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoPut_ResCase" />
+  </wsdl:message>
+  <wsdl:message name="IUser_DoPut_ResCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoPut_ResCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResCareRecord_html_cyh_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResCareRecord_html_cyh" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResCareRecord_html_cyh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResCareRecord_html_cyhResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResExamineDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResExamineDataList" />
+  </wsdl:message>
+  <wsdl:message name="IUser_ResExamineDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResExamineDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetLabDataFromHIS_Res_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabDataFromHIS_Res" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetLabDataFromHIS_Res_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabDataFromHIS_ResResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetOperationRoomStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationRoomStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetOperationRoomStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationRoomStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientBirthday_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientBirthday" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientBirthday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientBirthdayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetInPatientStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInPatientStatus" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetInPatientStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInPatientStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetInPatientStatusByBedNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInPatientStatusByBedNo" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetInPatientStatusByBedNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInPatientStatusByBedNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegister" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryRoom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryRoom" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryRoom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgerySchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgerySchedule" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgerySchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgerySchedule2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgerySchedule2" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgerySchedule2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgerySchedule2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSSoOp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSoOp" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSSoOp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSoOpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryFocus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryFocus" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryFocus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryFocusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryPushFocus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryPushFocus" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetSurgeryPushFocus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurgeryPushFocusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_OBKSENDSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OBKSENDSMS" />
+  </wsdl:message>
+  <wsdl:message name="IUser_OBKSENDSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OBKSENDSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryHEMReportByNet_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryHEMReportByNet" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryHEMReportByNet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryHEMReportByNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryHEMByChartNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryHEMByChartNo" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryHEMByChartNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryHEMByChartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryEmp" />
+  </wsdl:message>
+  <wsdl:message name="IUser_QueryEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_CreateNewFRM_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewFRM" />
+  </wsdl:message>
+  <wsdl:message name="IUser_CreateNewFRM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewFRMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_UploadPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadPDF" />
+  </wsdl:message>
+  <wsdl:message name="IUser_UploadPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientInfoByIdnoJSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByIdnoJSONData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientInfoByIdnoJSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByIdnoJSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientInfoByChartNoJSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByChartNoJSONData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetPatientInfoByChartNoJSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoByChartNoJSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_JSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:JSONData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_JSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetValue1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValue1" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetValue1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValue1Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_1" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_2" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_3_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_3" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_4" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_4Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_5_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_5" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q1_5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q1_5Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q2" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q3_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q3" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_1" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_2" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_3_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_3" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_4" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q4_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q4_4Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q5_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q5" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q5Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q6_InputMessage">
+    <wsdl:part name="parameters" element="tns:Q6" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Q6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Q6Response" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Anti_Cause_Log_InputMessage">
+    <wsdl:part name="parameters" element="tns:Anti_Cause_Log" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Anti_Cause_Log_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Anti_Cause_LogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Add_Drug_Problem_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add_Drug_Problem" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Add_Drug_Problem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Add_Drug_ProblemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Chemo_Change_Reason_InputMessage">
+    <wsdl:part name="parameters" element="tns:Chemo_Change_Reason" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Chemo_Change_Reason_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Chemo_Change_ReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Res_Recreate_Inform_InputMessage">
+    <wsdl:part name="parameters" element="tns:Res_Recreate_Inform" />
+  </wsdl:message>
+  <wsdl:message name="IUser_Res_Recreate_Inform_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Res_Recreate_InformResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_wclin_data_InputMessage">
+    <wsdl:part name="parameters" element="tns:wclin_data" />
+  </wsdl:message>
+  <wsdl:message name="IUser_wclin_data_OutputMessage">
+    <wsdl:part name="parameters" element="tns:wclin_dataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_cancer_center_data_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancer_center_data" />
+  </wsdl:message>
+  <wsdl:message name="IUser_cancer_center_data_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancer_center_dataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_PatientJSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientJSONData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_PatientJSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientJSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsPatientScheduleJSONData_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsPatientScheduleJSONData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsPatientScheduleJSONData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsPatientScheduleJSONDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsOrder" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsPatientListOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsPatientListOrder" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsPatientListOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsPatientListOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsExamineDataList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsExamineDataList" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsExamineDataList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsExamineDataListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsAssessmentPlanData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsAssessmentPlanData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetHdsAssessmentPlanData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHdsAssessmentPlanDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_TurnHdsAssessmentPlanData_InputMessage">
+    <wsdl:part name="parameters" element="tns:TurnHdsAssessmentPlanData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_TurnHdsAssessmentPlanData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TurnHdsAssessmentPlanDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsPatientSchedule_byChartno_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsPatientSchedule_byChartno" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsPatientSchedule_byChartno_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsPatientSchedule_byChartnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsCheckTransfusionNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsCheckTransfusionNo" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsCheckTransfusionNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsCheckTransfusionNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsGetTransfusionData_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsGetTransfusionData" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsGetTransfusionData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsGetTransfusionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsDrugUserecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsDrugUserecord" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsDrugUserecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsDrugUserecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsQueryTnxblood_InputMessage">
+    <wsdl:part name="parameters" element="tns:HdsQueryTnxblood" />
+  </wsdl:message>
+  <wsdl:message name="IUser_HdsQueryTnxblood_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HdsQueryTnxbloodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertOrderApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderApi" />
+  </wsdl:message>
+  <wsdl:message name="IUser_InsertOrderApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_NotifyPatientApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyPatientApi" />
+  </wsdl:message>
+  <wsdl:message name="IUser_NotifyPatientApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyPatientApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetNotificationApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationApi" />
+  </wsdl:message>
+  <wsdl:message name="IUser_GetNotificationApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationApiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUser">
+    <wsdl:operation name="QueryAnesPreEvalList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/QueryAnesPreEvalList" message="tns:IUser_QueryAnesPreEvalList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/QueryAnesPreEvalListResponse" message="tns:IUser_QueryAnesPreEvalList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAnesPreEvalCheckInTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertAnesPreEvalCheckInTime" message="tns:IUser_InsertAnesPreEvalCheckInTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertAnesPreEvalCheckInTimeResponse" message="tns:IUser_InsertAnesPreEvalCheckInTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPCSGatewayOne">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertPCSGatewayOne" message="tns:IUser_InsertPCSGatewayOne_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertPCSGatewayOneResponse" message="tns:IUser_InsertPCSGatewayOne_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOpRoomReservationforAnesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/QueryOpRoomReservationforAnesList" message="tns:IUser_QueryOpRoomReservationforAnesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/QueryOpRoomReservationforAnesListResponse" message="tns:IUser_QueryOpRoomReservationforAnesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPCSGatewayAnes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertPCSGatewayAnes" message="tns:IUser_InsertPCSGatewayAnes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertPCSGatewayAnesResponse" message="tns:IUser_InsertPCSGatewayAnes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createSDMQ">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/createSDMQ" message="tns:IUser_createSDMQ_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/createSDMQResponse" message="tns:IUser_createSDMQ_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NursingRecordApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/NursingRecordApi" message="tns:IUser_NursingRecordApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/NursingRecordApiResponse" message="tns:IUser_NursingRecordApi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DialysisRecordApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/DialysisRecordApi" message="tns:IUser_DialysisRecordApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/DialysisRecordApiResponse" message="tns:IUser_DialysisRecordApi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DialysisRecordApi_HTML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/DialysisRecordApi_HTML" message="tns:IUser_DialysisRecordApi_HTML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/DialysisRecordApi_HTMLResponse" message="tns:IUser_DialysisRecordApi_HTML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertAP" message="tns:IUser_InsertAP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertAPResponse" message="tns:IUser_InsertAP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertWeight" message="tns:IUser_InsertWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertWeightResponse" message="tns:IUser_InsertWeight_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYueKangServerIPfromConfig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetYueKangServerIPfromConfig" message="tns:IUser_GetYueKangServerIPfromConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetYueKangServerIPfromConfigResponse" message="tns:IUser_GetYueKangServerIPfromConfig_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TurnDataBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/TurnDataBatch" message="tns:IUser_TurnDataBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/TurnDataBatchResponse" message="tns:IUser_TurnDataBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_all">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_all" message="tns:IUser_ResPatientSchedule_all_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_allResponse" message="tns:IUser_ResPatientSchedule_all_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_stationORchartno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_stationORchartno" message="tns:IUser_ResPatientSchedule_stationORchartno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_stationORchartnoResponse" message="tns:IUser_ResPatientSchedule_stationORchartno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_bydate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_bydate" message="tns:IUser_ResPatientSchedule_bydate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_bydateResponse" message="tns:IUser_ResPatientSchedule_bydate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_bydate_station">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_bydate_station" message="tns:IUser_ResPatientSchedule_bydate_station_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResPatientSchedule_bydate_stationResponse" message="tns:IUser_ResPatientSchedule_bydate_station_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientData_chartno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResPatientData_chartno" message="tns:IUser_ResPatientData_chartno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResPatientData_chartnoResponse" message="tns:IUser_ResPatientData_chartno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoPost_ResCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/DoPost_ResCase" message="tns:IUser_DoPost_ResCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/DoPost_ResCaseResponse" message="tns:IUser_DoPost_ResCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoPut_ResCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/DoPut_ResCase" message="tns:IUser_DoPut_ResCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/DoPut_ResCaseResponse" message="tns:IUser_DoPut_ResCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResCareRecord_html_cyh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResCareRecord_html_cyh" message="tns:IUser_ResCareRecord_html_cyh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResCareRecord_html_cyhResponse" message="tns:IUser_ResCareRecord_html_cyh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResExamineDataList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/ResExamineDataList" message="tns:IUser_ResExamineDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/ResExamineDataListResponse" message="tns:IUser_ResExamineDataList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabDataFromHIS_Res">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetLabDataFromHIS_Res" message="tns:IUser_GetLabDataFromHIS_Res_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetLabDataFromHIS_ResResponse" message="tns:IUser_GetLabDataFromHIS_Res_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationRoomStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetOperationRoomStatus" message="tns:IUser_GetOperationRoomStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetOperationRoomStatusResponse" message="tns:IUser_GetOperationRoomStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientBirthday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetPatientBirthday" message="tns:IUser_GetPatientBirthday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetPatientBirthdayResponse" message="tns:IUser_GetPatientBirthday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInPatientStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetInPatientStatus" message="tns:IUser_GetInPatientStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetInPatientStatusResponse" message="tns:IUser_GetInPatientStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInPatientStatusByBedNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetInPatientStatusByBedNo" message="tns:IUser_GetInPatientStatusByBedNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetInPatientStatusByBedNoResponse" message="tns:IUser_GetInPatientStatusByBedNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetRegister" message="tns:IUser_GetRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetRegisterResponse" message="tns:IUser_GetRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryRoom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSurgeryRoom" message="tns:IUser_GetSurgeryRoom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSurgeryRoomResponse" message="tns:IUser_GetSurgeryRoom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgerySchedule">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSurgerySchedule" message="tns:IUser_GetSurgerySchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSurgeryScheduleResponse" message="tns:IUser_GetSurgerySchedule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgerySchedule2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSurgerySchedule2" message="tns:IUser_GetSurgerySchedule2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSurgerySchedule2Response" message="tns:IUser_GetSurgerySchedule2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSSoOp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSSoOp" message="tns:IUser_GetSSoOp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSSoOpResponse" message="tns:IUser_GetSSoOp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryFocus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSurgeryFocus" message="tns:IUser_GetSurgeryFocus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSurgeryFocusResponse" message="tns:IUser_GetSurgeryFocus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryPushFocus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetSurgeryPushFocus" message="tns:IUser_GetSurgeryPushFocus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetSurgeryPushFocusResponse" message="tns:IUser_GetSurgeryPushFocus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OBKSENDSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/OBKSENDSMS" message="tns:IUser_OBKSENDSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/OBKSENDSMSResponse" message="tns:IUser_OBKSENDSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHEMReportByNet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/QueryHEMReportByNet" message="tns:IUser_QueryHEMReportByNet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/QueryHEMReportByNetResponse" message="tns:IUser_QueryHEMReportByNet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHEMByChartNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/QueryHEMByChartNo" message="tns:IUser_QueryHEMByChartNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/QueryHEMByChartNoResponse" message="tns:IUser_QueryHEMByChartNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/QueryEmp" message="tns:IUser_QueryEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/QueryEmpResponse" message="tns:IUser_QueryEmp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewFRM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/CreateNewFRM" message="tns:IUser_CreateNewFRM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/CreateNewFRMResponse" message="tns:IUser_CreateNewFRM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/UploadPDF" message="tns:IUser_UploadPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/UploadPDFResponse" message="tns:IUser_UploadPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByIdnoJSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetPatientInfoByIdnoJSONData" message="tns:IUser_GetPatientInfoByIdnoJSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetPatientInfoByIdnoJSONDataResponse" message="tns:IUser_GetPatientInfoByIdnoJSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByChartNoJSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetPatientInfoByChartNoJSONData" message="tns:IUser_GetPatientInfoByChartNoJSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetPatientInfoByChartNoJSONDataResponse" message="tns:IUser_GetPatientInfoByChartNoJSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/JSONData" message="tns:IUser_JSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/JSONDataResponse" message="tns:IUser_JSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValue1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetValue1" message="tns:IUser_GetValue1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetValue1Response" message="tns:IUser_GetValue1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q1_1" message="tns:IUser_Q1_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q1_1Response" message="tns:IUser_Q1_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q1_2" message="tns:IUser_Q1_2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q1_2Response" message="tns:IUser_Q1_2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q1_3" message="tns:IUser_Q1_3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q1_3Response" message="tns:IUser_Q1_3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q1_4" message="tns:IUser_Q1_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q1_4Response" message="tns:IUser_Q1_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q1_5" message="tns:IUser_Q1_5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q1_5Response" message="tns:IUser_Q1_5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q2" message="tns:IUser_Q2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q2Response" message="tns:IUser_Q2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q3" message="tns:IUser_Q3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q3Response" message="tns:IUser_Q3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q4_1" message="tns:IUser_Q4_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q4_1Response" message="tns:IUser_Q4_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q4_2" message="tns:IUser_Q4_2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q4_2Response" message="tns:IUser_Q4_2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q4_3" message="tns:IUser_Q4_3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q4_3Response" message="tns:IUser_Q4_3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q4_4" message="tns:IUser_Q4_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q4_4Response" message="tns:IUser_Q4_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q5" message="tns:IUser_Q5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q5Response" message="tns:IUser_Q5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Q6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Q6" message="tns:IUser_Q6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Q6Response" message="tns:IUser_Q6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Anti_Cause_Log">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Anti_Cause_Log" message="tns:IUser_Anti_Cause_Log_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Anti_Cause_LogResponse" message="tns:IUser_Anti_Cause_Log_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Drug_Problem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Add_Drug_Problem" message="tns:IUser_Add_Drug_Problem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Add_Drug_ProblemResponse" message="tns:IUser_Add_Drug_Problem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Chemo_Change_Reason">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Chemo_Change_Reason" message="tns:IUser_Chemo_Change_Reason_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Chemo_Change_ReasonResponse" message="tns:IUser_Chemo_Change_Reason_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Res_Recreate_Inform">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/Res_Recreate_Inform" message="tns:IUser_Res_Recreate_Inform_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/Res_Recreate_InformResponse" message="tns:IUser_Res_Recreate_Inform_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="wclin_data">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/wclin_data" message="tns:IUser_wclin_data_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/wclin_dataResponse" message="tns:IUser_wclin_data_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancer_center_data">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/cancer_center_data" message="tns:IUser_cancer_center_data_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/cancer_center_dataResponse" message="tns:IUser_cancer_center_data_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientJSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/PatientJSONData" message="tns:IUser_PatientJSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/PatientJSONDataResponse" message="tns:IUser_PatientJSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsPatientScheduleJSONData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsPatientScheduleJSONData" message="tns:IUser_HdsPatientScheduleJSONData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsPatientScheduleJSONDataResponse" message="tns:IUser_HdsPatientScheduleJSONData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetHdsOrder" message="tns:IUser_GetHdsOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetHdsOrderResponse" message="tns:IUser_GetHdsOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsPatientListOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetHdsPatientListOrder" message="tns:IUser_GetHdsPatientListOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetHdsPatientListOrderResponse" message="tns:IUser_GetHdsPatientListOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsExamineDataList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetHdsExamineDataList" message="tns:IUser_GetHdsExamineDataList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetHdsExamineDataListResponse" message="tns:IUser_GetHdsExamineDataList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsAssessmentPlanData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetHdsAssessmentPlanData" message="tns:IUser_GetHdsAssessmentPlanData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetHdsAssessmentPlanDataResponse" message="tns:IUser_GetHdsAssessmentPlanData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TurnHdsAssessmentPlanData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/TurnHdsAssessmentPlanData" message="tns:IUser_TurnHdsAssessmentPlanData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/TurnHdsAssessmentPlanDataResponse" message="tns:IUser_TurnHdsAssessmentPlanData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsPatientSchedule_byChartno">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsPatientSchedule_byChartno" message="tns:IUser_HdsPatientSchedule_byChartno_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsPatientSchedule_byChartnoResponse" message="tns:IUser_HdsPatientSchedule_byChartno_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsCheckTransfusionNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsCheckTransfusionNo" message="tns:IUser_HdsCheckTransfusionNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsCheckTransfusionNoResponse" message="tns:IUser_HdsCheckTransfusionNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsGetTransfusionData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsGetTransfusionData" message="tns:IUser_HdsGetTransfusionData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsGetTransfusionDataResponse" message="tns:IUser_HdsGetTransfusionData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsDrugUserecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsDrugUserecord" message="tns:IUser_HdsDrugUserecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsDrugUserecordResponse" message="tns:IUser_HdsDrugUserecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HdsQueryTnxblood">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/HdsQueryTnxblood" message="tns:IUser_HdsQueryTnxblood_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/HdsQueryTnxbloodResponse" message="tns:IUser_HdsQueryTnxblood_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrderApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/InsertOrderApi" message="tns:IUser_InsertOrderApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/InsertOrderApiResponse" message="tns:IUser_InsertOrderApi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPatientApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/NotifyPatientApi" message="tns:IUser_NotifyPatientApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/NotifyPatientApiResponse" message="tns:IUser_NotifyPatientApi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUser/GetNotificationApi" message="tns:IUser_GetNotificationApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUser/GetNotificationApiResponse" message="tns:IUser_GetNotificationApi_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebHttpBinding_IUser" type="tns:IUser">
+    <wsdl:operation name="QueryAnesPreEvalList">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAnesPreEvalCheckInTime">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPCSGatewayOne">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOpRoomReservationforAnesList">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPCSGatewayAnes">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="createSDMQ">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="NursingRecordApi">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DialysisRecordApi">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DialysisRecordApi_HTML">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAP">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWeight">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetYueKangServerIPfromConfig">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="TurnDataBatch">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_all">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_stationORchartno">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_bydate">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientSchedule_bydate_station">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResPatientData_chartno">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DoPost_ResCase">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DoPut_ResCase">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResCareRecord_html_cyh">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="ResExamineDataList">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabDataFromHIS_Res">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationRoomStatus">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientBirthday">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetInPatientStatus">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetInPatientStatusByBedNo">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegister">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryRoom">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgerySchedule">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgerySchedule2">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSSoOp">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryFocus">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurgeryPushFocus">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="OBKSENDSMS">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHEMReportByNet">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="QueryHEMByChartNo">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="QueryEmp">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewFRM">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="UploadPDF">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByIdnoJSONData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfoByChartNoJSONData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="JSONData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetValue1">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_1">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_2">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_3">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_4">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q1_5">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q2">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q3">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_1">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_2">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_3">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q4_4">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q5">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Q6">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Anti_Cause_Log">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Drug_Problem">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Chemo_Change_Reason">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Res_Recreate_Inform">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="wclin_data">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="cancer_center_data">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="PatientJSONData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsPatientScheduleJSONData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsOrder">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsPatientListOrder">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsExamineDataList">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetHdsAssessmentPlanData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="TurnHdsAssessmentPlanData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsPatientSchedule_byChartno">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsCheckTransfusionNo">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsGetTransfusionData">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsDrugUserecord">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="HdsQueryTnxblood">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrderApi">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyPatientApi">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificationApi">
+      <wsdl:input />
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="User">
+    <wsdl:port name="WebHttpBinding_IUser" binding="tns:WebHttpBinding_IUser" />
+  </wsdl:service>
+</wsdl:definitions>

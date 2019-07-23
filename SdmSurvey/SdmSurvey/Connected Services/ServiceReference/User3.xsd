@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AnesContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AirSupplypres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Aircylinderpres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Airmeasuredflow" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AirwayMeasureSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CO2Units" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowMeasureSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowUnits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FunctionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModalityID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mvexp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mvexpspont" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mvinsp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N2OSupplypres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N2Ocylinderpres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="N2Omeasuredflow" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2MeasureSource" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2Supplypres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2cylinderpres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2cylinderpres2nd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="O2measuredflow" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PEEP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PEEPeI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientSN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pmean" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ppeak" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pplat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PressureUnits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RRspont" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeqNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tvexp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tvexpspont" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tvinsp" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnesContext" nillable="true" type="tns:AnesContext" />
+  <xs:complexType name="ArrayOfOperationRoomStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationRoomStatus" nillable="true" type="tns:OperationRoomStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationRoomStatus" nillable="true" type="tns:ArrayOfOperationRoomStatus" />
+  <xs:complexType name="OperationRoomStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Patient_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sex_Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationRoomStatus" nillable="true" type="tns:OperationRoomStatus" />
+  <xs:complexType name="ArrayOfPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Patient" nillable="true" type="tns:Patient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatient" nillable="true" type="tns:ArrayOfPatient" />
+  <xs:complexType name="Patient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birth_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Patient" nillable="true" type="tns:Patient" />
+  <xs:complexType name="ArrayOfInPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InPatient" nillable="true" type="tns:InPatient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInPatient" nillable="true" type="tns:ArrayOfInPatient" />
+  <xs:complexType name="InPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bed_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient_Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InPatient" nillable="true" type="tns:InPatient" />
+  <xs:complexType name="ArrayOfRegisterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegisterData" nillable="true" type="tns:RegisterData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegisterData" nillable="true" type="tns:ArrayOfRegisterData" />
+  <xs:complexType name="RegisterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Register_Result" nillable="true" type="tns:ArrayOfRegisterResult" />
+      <xs:element minOccurs="0" name="Result_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result_Msg" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterData" nillable="true" type="tns:RegisterData" />
+  <xs:complexType name="ArrayOfRegisterResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegisterResult" nillable="true" type="tns:RegisterResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegisterResult" nillable="true" type="tns:ArrayOfRegisterResult" />
+  <xs:complexType name="RegisterResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Noon_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reg_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reg_Sn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Section_Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegisterResult" nillable="true" type="tns:RegisterResult" />
+  <xs:complexType name="ArrayOfSurgery_Room">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Surgery_Room" nillable="true" type="tns:Surgery_Room" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurgery_Room" nillable="true" type="tns:ArrayOfSurgery_Room" />
+  <xs:complexType name="Surgery_Room">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enter_Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="In_Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OP_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OP_Diag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Room_No" type="xs:int" />
+      <xs:element minOccurs="0" name="Start_Time" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Surgery_Room" nillable="true" type="tns:Surgery_Room" />
+  <xs:complexType name="ArrayOfSurgery_Schedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Surgery_Schedule" nillable="true" type="tns:Surgery_Schedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSurgery_Schedule" nillable="true" type="tns:ArrayOfSurgery_Schedule" />
+  <xs:complexType name="Surgery_Schedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckInNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Decide_Op_Time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Diagnose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InRoom_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patient_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Room_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Seq_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Src_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Urgent_Flag" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Surgery_Schedule" nillable="true" type="tns:Surgery_Schedule" />
+  <xs:complexType name="OP_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activate" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Doctor_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Employee_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OP_User" nillable="true" type="tns:OP_User" />
+  <xs:complexType name="EasyFormContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chart_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MainDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modify_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Outpatient_Sn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Report_FID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source_Type_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlParam" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EasyFormContext" nillable="true" type="tns:EasyFormContext" />
+  <xs:complexType name="Pdf">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="chartNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pdfBase64" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pdfName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pdf" nillable="true" type="tns:Pdf" />
+</xs:schema>

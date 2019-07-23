@@ -1,0 +1,7 @@
+D:\vs_net\SdmSurvey\SdmSurvey\bin\SdmSurvey.dll.config
+D:\vs_net\SdmSurvey\SdmSurvey\bin\SdmSurvey.dll
+D:\vs_net\SdmSurvey\SdmSurvey\bin\SdmSurvey.pdb
+D:\vs_net\SdmSurvey\SdmSurvey\obj\Release\SdmSurvey.csprojAssemblyReference.cache
+D:\vs_net\SdmSurvey\SdmSurvey\obj\Release\SdmSurvey.csproj.CoreCompileInputs.cache
+D:\vs_net\SdmSurvey\SdmSurvey\obj\Release\SdmSurvey.dll
+D:\vs_net\SdmSurvey\SdmSurvey\obj\Release\SdmSurvey.pdb
