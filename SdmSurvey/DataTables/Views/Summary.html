@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery V3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/underscore-min.js"></script>
+
+    <!-- DataTables v1.10.19 -->
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!--Chart-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+    <style>
+        .showHide {
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <h4>步驟二</h4>
+        <p id="step1_title">您選擇治療方式會在意的因素有什麼?以及在意的程度</p>
+        <div class="row">
+            <div class="col-md-7">
+                <div style="padding: 0px; border: 0px solid black; margin-top: 0px" class="container-fluid">
+                    <table id="g1_view" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>考量因素</th>
+                                <th>排序1</th>
+                                <th>排序2</th>
+                                <th>排序3</th>
+                                <th>排序4</th>
+                                <th>排序5</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="chart-container" style="position: relative; height:100%; width:100%">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <h4>步驟三</h4>
+        <p id="step1_title">認識穩定性心絞痛(冠心病)的每年風險</p>
+        <div class="row">
+            <div class="col-sm-12" style="background-color:rgba(255, 206, 86, 0.1);text-align: center;">
+                   <label style="display: inline-block;">
+                        <input type="radio" id="risk1" name="risk" class="step3_question" value="1" required="required" />高度風險類
+                    </label>
+                    <label style="display: inline-block;">
+                        <input type="radio" id="risk2" name="risk" class="step3_question" value="2" required="required" />中度風險類
+                    </label>
+                    <label style="display: inline-block;">
+                        <input type="radio" id="risk3" name="risk" class="step3_question" value="3" required="required" />低度風險類
+                    </label>
+               
+            </div>
+           
+        </div>
+        <h4>步驟四</h4>
+        <p id="step1_title">您對治療方式的認知有多少？ </p>
+        <div class="row">
+            <div class="col-md-7">
+                <p> 1. 接受心導管檢查及支架手術，能有效降低高風險心絞痛患者的死亡率。</p>
+                <br />
+                    <div style="padding: 0px; border: 0px solid black; margin-top: 0px" class="container-fluid">
+                        <table id="g4_1_view" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>選項</th>
+                                    <th>填答次數</th>
+                                    <th>百分比</th>
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+            </div>
+            <div class="col-md-5">
+                <div class="chart-container" style="position: relative; height:100%; width:100%">
+                    <canvas id="myDoughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <h4>步驟五</h4>
+        <p id="step1_title">您現在確認好治療方式了嗎？</p>
+        <div class="row">
+            <div class="col-md-7">
+                <p> >>>>我已經確認好想要的治療方式，我決定選擇：</p>
+                <br />
+                <div style="padding: 0px; border: 0px solid black; margin-top: 0px" class="container-fluid">
+                    <table id="g5_view" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>選項</th>
+                                <th>填答次數</th>
+                                <th>百分比</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="chart-container" style="position: relative; height:100%; width:100%">
+                    <canvas id="my5DoughnutChart"></canvas>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <p> >>>>我目前還無法決定</p>
+                <br />
+                <div style="padding: 0px; border: 0px solid black; margin-top: 0px" class="container-fluid">
+                    <table id="g6_view" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>選項</th>
+                                <th>填答次數</th>
+                                <th>百分比</th>
+                            </tr>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="chart-container" style="position: relative; height:100%; width:100%">
+                    <canvas id="my6DoughnutChart"></canvas>
+                </div>
+            </div>
+            <div class="col-xs-9">.col-xs-9</div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- vendor css -->
+    <link href="/css/DataTables-1.min.css" rel="stylesheet" />
+    <!-- vendor js -->
+    <script src="/js/DataTables-1.js"></script>
+    <script>
+        var str = getParameterByName('id');
+        var array = str.split("_");
+        var Chart_no = array[0]; // Chart_no
+        var QuestId = array[1]; //QuestId
+
+        $(document).ready(function () {
+            //table
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                url: "SummaryService.asmx/QueryOrderTable",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '2' }),
+                success: function (data) {
+                    var datatableVariable = $('#g1_view').DataTable({
+                        filter: false,//是否有搜尋資料的input
+                        info: false,
+                        ordering: false,
+                        // bAutoWidth: false,//是否要自動欄寬
+                        scrollCollapse: false,
+                        paginate: false,
+                        data: $.parseJSON(data.d),
+                        columns: [
+                            { 'data': 'yN' },
+                            { 'data': 'order1' },
+                            { 'data': 'order2' },
+                            { 'data': 'order3' },
+                            { 'data': 'order4' },
+                            { 'data': 'order5' }
+                        ]
+                    });
+
+
+                }
+
+            });
+
+            //chart
+
+            $.ajax({
+                type: "POST",
+                url: "SummaryService.asmx/getLineChartData",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '2' }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnLinChartSuccess_,
+                error: OnErrorCall_
+            });
+
+
+            function OnLinChartSuccess_(reponse) {
+                var aData = reponse.d;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var ctx = $('#myChart');
+                var myChart = new Chart(ctx, {
+                    type: 'horizontalBar',
+                    responsive: true, 
+                    data: {
+                        labels: aLabels,
+                        datasets: [{
+                            label: '# of weighting factor',
+                            data: aDatasets1,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+
+            }
+            function OnErrorCall_(repo) {
+                alert("Woops something went wrong, pls try later !");
+            }
+     
+
+
+         //radiotable
+         $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                url: "SummaryService.asmx/QueryRadioTable",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '4', position: '1', questId: QuestId}),
+                success: function (data) {
+                    var datatableVariable2 = $('#g4_1_view').DataTable({
+                        filter: false,//是否有搜尋資料的input
+                        info: false,
+                        ordering: false,
+                        // bAutoWidth: false,//是否要自動欄寬
+                        scrollCollapse: false,
+                        paginate: false,
+                        data: $.parseJSON(data.d),
+                        columns: [
+                            { 'data': 'value' },
+                            { 'data': 'v_t' },
+                            { 'data': 'c_p' }
+                        ]
+                    });
+
+
+                }
+
+            });
+
+
+          // doughnut char
+            $.ajax({
+                type: "POST",
+                url: "SummaryService.asmx/getDoughnutChartData",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '4', position: '1', questId: QuestId}),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: OnDoughnutChartSuccess_,
+                error: OnErrorCall_
+            });
+
+
+            function OnDoughnutChartSuccess_(reponse) {
+                var aData = reponse.d;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var ctx = $('#myDoughnutChart');
+                var myDoughnutChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: aLabels,
+                        datasets: [{
+                           // label: '# of weighting factor',
+                            data: aDatasets1,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    }
+                });
+
+            }
+
+
+        //radiotable5
+         $.ajax({
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                url: "SummaryService.asmx/QueryRadioTable",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '5', position: '1', questId: QuestId}),
+                success: function (data) {
+                    var datatableVariable3 = $('#g5_view').DataTable({
+                        filter: false,//是否有搜尋資料的input
+                        info: false,
+                        ordering: false,
+                        // bAutoWidth: false,//是否要自動欄寬
+                        scrollCollapse: false,
+                        paginate: false,
+                        data: $.parseJSON(data.d),
+                        columns: [
+                            { 'data': 'value' },
+                            { 'data': 'v_t' },
+                            { 'data': 'c_p' }
+                        ]
+                    });
+
+
+                }
+
+            });
+
+         // doughnut char
+            $.ajax({
+                type: "POST",
+                url: "SummaryService.asmx/getDoughnutChartData",
+                data: JSON.stringify({ chartNo: Chart_no, stpeVal: '5', position: '1', questId: QuestId}),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: On5ChartSuccess_,
+                error: OnErrorCall_
+            });
+
+             function On5ChartSuccess_(reponse) {
+                var aData = reponse.d;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var ctx = $('#my5DoughnutChart');
+                var myDoughnutChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: aLabels,
+                        datasets: [{
+                           // label: '# of weighting factor',
+                            data: aDatasets1
+                        }]
+                    }
+                });
+
+            }
+
+
+   });
+
+    </script>
+
+</body>
+</html>

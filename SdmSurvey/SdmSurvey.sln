@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdmSurvey", "SdmSurvey\SdmSurvey.csproj", "{6343654C-3944-4CBA-A347-4DB865CFC912}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTables", "DataTables\DataTables.csproj", "{2BDB1C7D-C11C-431B-A723-2F9EDF239729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cpd_web", "cpd_web\cpd_web\cpd_web.csproj", "{5B1BA0EC-6491-4FC7-9266-4C0C0703D3A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{6343654C-3944-4CBA-A347-4DB865CFC912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6343654C-3944-4CBA-A347-4DB865CFC912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6343654C-3944-4CBA-A347-4DB865CFC912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BDB1C7D-C11C-431B-A723-2F9EDF239729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BDB1C7D-C11C-431B-A723-2F9EDF239729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BDB1C7D-C11C-431B-A723-2F9EDF239729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BDB1C7D-C11C-431B-A723-2F9EDF239729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1BA0EC-6491-4FC7-9266-4C0C0703D3A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1BA0EC-6491-4FC7-9266-4C0C0703D3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1BA0EC-6491-4FC7-9266-4C0C0703D3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1BA0EC-6491-4FC7-9266-4C0C0703D3A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

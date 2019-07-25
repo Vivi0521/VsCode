@@ -39,7 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SsoUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SsoUtil.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -98,13 +105,29 @@
     <None Include="Connected Services\ServiceReference\User32.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="css\DataTables-1.css" />
+    <Content Include="css\DataTables-1.min.css">
+      <DependentUpon>DataTables-1.css</DependentUpon>
+    </Content>
     <Content Include="css\sb-admin-2.min.css">
       <DependentUpon>sb-admin-2.css</DependentUpon>
     </Content>
+    <Content Include="HtmlPage1.html" />
     <Content Include="img\20190313000051.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\backbone-min.js" />
+    <Content Include="js\DataTables-1.js" />
+    <Content Include="js\underscore-min.js" />
+    <Content Include="js\vfs_fonts.js" />
+    <Content Include="js\vfs_fonts.min.js">
+      <DependentUpon>vfs_fonts.js</DependentUpon>
+    </Content>
+    <Content Include="MasterList.html" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="libman.json" />
+    <Content Include="log4net.config" />
+    <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +195,7 @@
     <Content Include="Resource\assets\sass\libs\_vars.scss" />
     <Content Include="Resource\assets\sass\main.scss" />
     <Content Include="Scripts\jquery.qrcode.min.js" />
+    <Content Include="ServiceTables.asmx" />
     <Content Include="Surveys\SDM041.aspx" />
     <Content Include="Surveys\SDM091.aspx" />
     <Content Include="Surveys\SDM0A1_Handler.ashx" />
@@ -211,6 +235,7 @@
     <Content Include="scss\_navs.scss" />
     <Content Include="scss\_utilities.scss" />
     <Content Include="scss\_variables.scss" />
+    <Content Include="Surveys\SDM231.aspx" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.js.map" />
@@ -2003,7 +2028,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\LogHelper.cs" />
     <Compile Include="Class\Master.cs" />
+    <Compile Include="Class\OrderTable.cs" />
+    <Compile Include="Class\Question.cs" />
+    <Compile Include="Class\RadioTable.cs" />
+    <Compile Include="Class\UserInfo.cs" />
     <Compile Include="Connected Services\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2019,6 +2049,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTables.asmx.cs">
+      <DependentUpon>ServiceTables.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Surveys\SDM041.aspx.cs">
       <DependentUpon>SDM041.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2048,6 +2082,13 @@
     </Compile>
     <Compile Include="Surveys\SDM0A1_Handler.ashx.cs">
       <DependentUpon>SDM0A1_Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Surveys\SDM231.aspx.cs">
+      <DependentUpon>SDM231.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Surveys\SDM231.aspx.designer.cs">
+      <DependentUpon>SDM231.aspx</DependentUpon>
     </Compile>
     <Compile Include="Surveys\SDM511.aspx.cs">
       <DependentUpon>SDM511.aspx</DependentUpon>

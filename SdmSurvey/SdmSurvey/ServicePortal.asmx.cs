@@ -7,9 +7,12 @@ using System.Web.Script.Serialization;
 using SdmSurvey.Class;
 using SdmSurvey.ServiceReference;
 using System.Net;
+using SsoUtil;
+using System.Xml;
 
 namespace SdmSurvey
 {
+
     /// <summary>
     ///Service1 的摘要描述
     /// </summary>
@@ -34,6 +37,7 @@ namespace SdmSurvey
             Master ms = new Master();
 
 
+
             string str_conn = WebConfigurationManager.ConnectionStrings["SQLConnectionString"].ConnectionString;
             try
             {
@@ -54,7 +58,7 @@ namespace SdmSurvey
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            ms.SqGrid = Convert.ToInt16(reader["SQ_GRID"]);
+                            ms.SqGRID = Convert.ToString(reader["SQ_GRID"]);
                             ms.ChartNo = Convert.ToString(reader["Chart_No"]);
                             ms.OutpatientSn = Convert.ToString(reader["Outpatient_Sn"]);
                             ms.PatientName = Convert.ToString(reader["Patient_Name"]);
@@ -103,7 +107,7 @@ namespace SdmSurvey
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            ms.SqGrid = Convert.ToInt16(reader["SQ_GRID"]);
+                            ms.SqGRID = Convert.ToString(reader["SQ_GRID"]);
                             ms.ChartNo = Convert.ToString(reader["Chart_No"]);
                             ms.OutpatientSn = Convert.ToString(reader["Outpatient_Sn"]);
                             ms.PatientName = Convert.ToString(reader["Patient_Name"]);
@@ -141,6 +145,43 @@ namespace SdmSurvey
 
 
 
+        [WebMethod(EnableSession =true)]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string Verification(UserInfo userInfo) {
+            LogHelper lh = new LogHelper();
+           
+
+            // 檢核SSO
+            WinSsoUtil sso = new WinSsoUtil();
+            string info = sso.GetUserInfo("http://hisweb.hosp.ncku/WebSiteSSO", userInfo.UserID, userInfo.Password);
+
+            //取得根節點內的子節點
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(info);
+
+            XmlNode activate = doc.SelectSingleNode("nckuh-info/ad-user/user-activate");
+
+            if (activate == null) return "N";
+
+            if (!bool.Parse(activate.InnerText))
+            {
+                XmlNode ErrMessage = doc.SelectSingleNode("nckuh-info/ad-user/user-ErrMessage");
+                lh.WriteLog("[Verification empId]", ErrMessage.InnerText);
+                return "N";
+            }
+
+            //註記為登入狀態
+            Session["isLogined"] = "Y";
+            Session["userName"] = doc.SelectSingleNode("nckuh-info/ad-user/user-name").InnerText;
+            Session["userId"] = doc.SelectSingleNode("//user-id").InnerText;
+
+
+
+            return "Y";
+        }
+
+
+
         //Get Ip Address
         protected string GetIPAddress()
         {
@@ -158,6 +199,34 @@ namespace SdmSurvey
             return context.Request.ServerVariables["REMOTE_ADDR"];
         }
 
+
+
+        //以下Session的使用
+        [WebMethod(enableSession: true)]
+        public string RemoveSession()
+        {
+
+            Session.Remove("test");
+            return "移除Session : 測試Session裡的值為: " + Session["test"];
+        }
+        [WebMethod(enableSession: true)]
+        public string ShowSession()
+        {
+            String id = (String)Session["userId"];
+            if (id == null)
+                id = "0";
+            String name = (String)Session["userName"];
+            if (name == null)
+                name = "GUEST";
+            return id+"_"+name;
+        }
+
+        [WebMethod(enableSession: true)]
+        public string SetSession()
+        {
+           Session["test"] = "helloworld";
+            return "設定Session成功!";
+        }
 
     }
 

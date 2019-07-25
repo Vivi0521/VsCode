@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "css/DataTables-1.min.css",
+    "inputFiles": [
+      "css/DataTables-1.css"
+    ]
+  },
+  {
+    "outputFileName": "js/vfs_fonts.min.js",
+    "inputFiles": [
+      "js/vfs_fonts.js"
+    ]
+  },
+  {
+    "outputFileName": "js/DataTables-1.min.js",
+    "inputFiles": [
+      "js/DataTables-1.js"
+    ]
+  }
+]

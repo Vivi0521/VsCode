@@ -1,0 +1,15 @@
+D:\Project\cpd_web\cpd_web\bin\cpd_web.dll.config
+D:\Project\cpd_web\cpd_web\bin\cpd_web.dll
+D:\Project\cpd_web\cpd_web\bin\cpd_web.pdb
+D:\Project\cpd_web\cpd_web\bin\Newtonsoft.Json.dll
+D:\Project\cpd_web\cpd_web\bin\Newtonsoft.Json.xml
+D:\Project\cpd_web\cpd_web\obj\Release\cpd_web.dll
+D:\Project\cpd_web\cpd_web\obj\Release\cpd_web.pdb
+D:\vs_net\cpd_web\cpd_web\bin\cpd_web.dll.config
+D:\vs_net\cpd_web\cpd_web\bin\cpd_web.dll
+D:\vs_net\cpd_web\cpd_web\bin\cpd_web.pdb
+D:\vs_net\cpd_web\cpd_web\bin\Newtonsoft.Json.dll
+D:\vs_net\cpd_web\cpd_web\bin\Newtonsoft.Json.xml
+D:\vs_net\cpd_web\cpd_web\obj\Release\cpd_web.csprojResolveAssemblyReference.cache
+D:\vs_net\cpd_web\cpd_web\obj\Release\cpd_web.dll
+D:\vs_net\cpd_web\cpd_web\obj\Release\cpd_web.pdb
