@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Text;
-//using System.Collections.Generic;
-//using System.Configuration;
-//using System.Linq;
-using System.Web;
-
-
-using System.Data;
 using System.Data.SqlClient;
+using System.Web;
 using System.Web.Configuration;
+using System.Web.Script.Serialization;
+using System.Data;
+using Newtonsoft.Json;
+using SdmSurvey.Class;
+using SdmSurvey.Cs;
 
 namespace SdmSurvey.Surveys
 {
@@ -20,6 +19,52 @@ namespace SdmSurvey.Surveys
 
         public void ProcessRequest(HttpContext context)
         {
+            if (context.Request.QueryString["action"] != null)
+            {
+                string action = context.Request.QueryString["action"].ToString().ToUpper();
+
+                switch (action)
+                {
+                    case "GETDATA":
+                        GetData(context);
+                        break;
+                    case "SETDATA":
+                        SetData(context);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        private void GetData(HttpContext context)
+        {
+            string SqGrid = HttpUtility.UrlDecode(context.Request.Form["SqGrid"].ToString());
+
+            string datas = "[]";
+
+            //sqlQuery 
+            StringBuilder strQuery = new StringBuilder();
+            strQuery.Append("select * from SDM_Question_Detail where SQ_GRID =@SQ_GRID");
+
+            string[] paraN = { "@SQ_GRID" };
+            string[] paraV = { SqGrid };
+
+            CommonFunction link = new CommonFunction();
+            DataSet dts = link.ConnGetDataSet(strQuery.ToString(), paraN, paraV, "Text");
+
+
+            //撈取data
+            if (dts.Tables.Count >= 0)
+            {
+                datas = JsonConvert.SerializeObject(dts.Tables[0]);
+            }
+            context.Response.Write(datas);
+
+        }
+
+        private void SetData(HttpContext context)
+        {
+            
             try
             {
                 string data = HttpUtility.UrlDecode(context.Request.Form["q"].ToString());
@@ -67,13 +112,13 @@ namespace SdmSurvey.Surveys
                         step4_1 += k[0] == "41_1" ? k[1] : ", " + k[1];
                         //step4_1 += ", " + k[1];
                     }
-                    else if (k[0] == "42_1" || k[0] == "42_2" || k[0] == "42_3")
+                    else if (k[0] == "42_1" )
                     {
                         step4_2 += k[0] == "42_1" ? k[1] : ", " + k[1];
                        //step4_2 += ", " + k[1];
                     }
 
-                    else if (k[0] == "43_1" || k[0] == "43_2" || k[0] == "43_3" || k[0] == "43_4" || k[0] == "43_5")
+                    else if (k[0] == "43_1" )
                     {
                         step4_3 += k[0] == "43_1" ? k[1] : ", " + k[1];
                         //step4_3 += ", " + k[1];
@@ -333,7 +378,7 @@ namespace SdmSurvey.Surveys
 
 
                         cmd.Parameters["@SQ_GRID"].Value = curr_grid;
-                        cmd.Parameters["@SQ_seqNo"].Value = "2_2";
+                        cmd.Parameters["@SQ_seqNo"].Value = "2_3";
                         cmd.Parameters["@SQ_Type"].Value = "2";
                         cmd.Parameters["@SQ_single_value"].Value = "";
                         cmd.Parameters["@SQ_muti_value"].Value = step2_3;

@@ -108,62 +108,63 @@
     <link href="css/DataTables-1.min.css" rel="stylesheet" />
     <!-- vendor js -->
     <script src="js/DataTables-1.js"></script>
-
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
     <script>
 
-    //    function down(data) {
-    //var dd = {
-    //    content: [
-    //        data,
-    //        'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines'
-    //    ],
-    //    defaultStyle: {
-    //        font: 'kaiu'
-    //    }
-    //};
-    //pdfMake.fonts = {
-    //		kaiu: {
-    //        normal: 'kaiu.ttf',
-    //        bold: 'kaiu.ttf',
-    //        italics: 'kaiu.ttf',
-    //        bolditalics: 'kaiu.ttf'
-    //    }
-    //};
-//    pdfMake.createPdf(dd).download();
-//}
+        //    function down(data) {
+        //var dd = {
+        //    content: [
+        //        data,
+        //        'Another paragraph, this time a little bit longer to make sure, this line will be divided into at least two lines'
+        //    ],
+        //    defaultStyle: {
+        //        font: 'kaiu'
+        //    }
+        //};
+        //pdfMake.fonts = {
+        //		kaiu: {
+        //        normal: 'kaiu.ttf',
+        //        bold: 'kaiu.ttf',
+        //        italics: 'kaiu.ttf',
+        //        bolditalics: 'kaiu.ttf'
+        //    }
+        //};
+        //    pdfMake.createPdf(dd).download();
+        //}
         $(document).ready(function () {
 
-            ///*默認字體設定成我們新增的MSFont*/ 
+            ///*默認字體設定成我們新增的MSFont*/
             //defaultStyle: {
             // font: 'MSFont'
             //}
             ///*字體設定*/
             //pdfMake.fonts = {
-            //  /*Roboto為默認字體*/  
+            //  /*Roboto為默認字體*/
             //  Roboto: {
             //  normal: 'Roboto-Regular.ttf',
             //  bold: 'Roboto-Medium.ttf',
             //  italics: 'Roboto-Italic.ttf',
-            //  bolditalics: 'Roboto-Italic.ttf' 
+            //  bolditalics: 'Roboto-Italic.ttf'
             //},
             // /*加入我們自己的中文的字體*/
             // MSFont: {
             //   normal: 'kaiu.ttf',
             //   bold: 'kaiu.ttf',
             //   italics: 'kaiu.ttf',
-            //   bolditalics: 'kaiu.ttf', 
-            // } 
+            //   bolditalics: 'kaiu.ttf',
+            // }
             //};
-         pdfMake.fonts = {
- 	        Roboto: {
+            pdfMake.fonts = {
+                Roboto: {
                     normal: 'kaiu.ttf',
                     bold: 'kaiu.ttf',
                     italics: 'kaiu.ttf',
                     bolditalics: 'kaiu.ttf'
                 }
             };
-                    //load tpl
+            //load tpl
             //TemplateManager.load(['modal-template']);    //使用Ajax 的tpl公版, hide window後無法移除mask backgroud 再研究
             //load table
             $.ajax({
@@ -216,7 +217,7 @@
                                 extend: 'csv',
                                 text: 'CSV',
                                 bom: true
-                            }, 'excel','pdf', 'print'
+                            }, 'excel', 'pdf', 'print'
                         ]
                     });
 

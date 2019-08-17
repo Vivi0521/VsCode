@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDM - [CaseBoard]</title>
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+
+    <style>
+
+        #details-control2 {
+            width: 100px;
+            text-align: right;
+            background-image: url('img/chart.png');
+            background-position: center center;
+            background-repeat: no-repeat, no-repeat;
+            cursor: pointer;
+        }
+
+        td.details-control {
+            width: 50px;
+            text-align: right;
+            background: url('img/chevron-expand.png') no-repeat center center;
+            cursor: pointer;
+        }
+
+        tr.shown td.details-control {
+            background: url('img/delete.png') no-repeat center center;
+        }
+    </style>
+    <!--<link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" />-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> <!--字型與圖示-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/DataTables-1.min.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <div id="CaseListCav" style="padding: 3px; border: 3px solid black; margin-top: 4px;margin-left: 4px;margin-right: 4px;width:99.8%;overflow-x:hidden;overflow-y:hidden;" class="container-fluid">
+        <table id="CaseList" class="display">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ACTION</th>
+                    <th>病歷號碼</th>
+                    <th>病人姓名</th>
+                    <th>主治醫生</th>
+                    <th>門急住號</th>
+                    <th>開立數</th>
+                    <th>填寫數</th>
+                    <th>首次開立日</th>
+                    <th>最近填寫日</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <!--<script src="js/backbone-min.js"></script>-->
+    <!-- vendor js -->
+    <script src="js/DataTables-1.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script>
+        /* Formatting function for row details - modify as you need */
+        function format(d) {
+            var result = "";
+            if (JSON.stringify(d.detail) != "null") {
+                var array = d.detail.split(",");
+
+                var p_type = "";
+                var p_sign = "";
+                var p_sign_time = "";
+
+                var i;
+                for (i = 0; i < array.length; i++) {
+                    var sta = array[i].split(":");
+                    p_type += '<td>關係:' + sta[0] + '</td>';
+                    p_sign += '<td>填寫人:' + sta[1] + '</td>';
+                    p_sign_time += '<td>填寫日:' + sta[2] + '</td>';
+
+                }
+
+                result = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
+                result += '<tr>' + p_type + '</tr>';
+                result += '<tr>' + p_sign + '</tr>';
+                result += '<tr>' + p_sign_time + '</tr>';
+                result += '</table>';
+            } 
+            return result;
+
+  
+        }
+        function genTable(data, QuestId) {
+            var groupColumn = 1;
+            var datatableVariable = $('#CaseList').DataTable({
+                filter: false,//是否有搜尋資料的input
+                data: $.parseJSON(data.d),
+                retrieve: true,
+                destroy: true,
+                order: [[groupColumn, 'asc']],
+                displayLength: 18,
+                columns: [
+
+                    {
+                        class: 'details-control',
+                        orderable: false,
+                        data: null,
+                        defaultContent: ''
+                    },
+                    {
+                        //這裡的data變數值為sysid，相等於row.sysid
+                        data: null,//資料行繫結屬性
+                        orderable: false, // 禁用排序
+                        width: '150',
+                        render: function (data, type, row, meta) {
+                            var html = "<a role='button' class='btn btn-outline-primary btn-sm'>Summary</a>&nbsp;";
+                            html += "<a role='button' class='btn btn-outline-info btn-sm'>SAS</a>";
+                            return html;
+
+                        }
+                    },
+                    { 'data': 'chart_No' },
+                    { 'data': 'patient_Name' },
+                    { 'data': 'dr_info' },
+                    { 'data': 'outpatient_Sn' },
+                    { 'data': 'create_count' },
+                    { 'data': 'write_count' },
+                    { 'data': 'first_create_time' },
+                    { 'data': 'current_write_date' },
+                    { 'data': 'detail', visible: false }
+                ]
+            });
+
+            // Add event listener for opening and closing details
+            $('#CaseList tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = datatableVariable.row(tr);
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                }
+            });
+
+        }
+
+
+
+
+        $(document).ready(function () {
+
+
+            var str = getParameterByName('id');
+            var array = str.split("_");
+            var QuestId = array[0]; // QuestId
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                async: false,
+                contentType: "application/json; charset=utf-8",
+                url: "ServiceTables.asmx/QuerCase",
+                data: JSON.stringify({ QuestId: QuestId }),
+                success: function (data) {
+                    genTable(data, QuestId);
+                }
+
+            });
+
+
+        });
+
+
+    </script>
+</body>
+</html>

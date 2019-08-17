@@ -5,3 +5,13 @@ D:\Project\cpd_web\cpd_web\obj\Debug\cpd_web.dll
 D:\Project\cpd_web\cpd_web\obj\Debug\cpd_web.pdb
 D:\Project\cpd_web\cpd_web\bin\Newtonsoft.Json.dll
 D:\Project\cpd_web\cpd_web\bin\Newtonsoft.Json.xml
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\bin\cpd_web.dll.config
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\bin\cpd_web.dll
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\bin\cpd_web.pdb
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\bin\Newtonsoft.Json.dll
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\bin\Newtonsoft.Json.xml
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\obj\Debug\cpd_web.csprojAssemblyReference.cache
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\obj\Debug\cpd_web.csproj.CoreCompileInputs.cache
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\obj\Debug\cpd_web.csproj.CopyComplete
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\obj\Debug\cpd_web.dll
+D:\Git_Vs\SdmSurvey\cpd_web\cpd_web\obj\Debug\cpd_web.pdb

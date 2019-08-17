@@ -1,17 +1,26 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
+    <!--填寫問卷入口-->
     <meta charset="utf-8" />
     <script type="text/javascript" src="Scripts/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="Scripts/default.js"></script>
 
     <script type="text/javascript">
         // query string: ?id=SqGrid_chart_no
-        var str = getParameterByName('id');
-        var array = str.split("_");
+        //prod
+        //var str = getParameterByName('id');
+        //var array = str.split("_");
         
-         var SqGrid =array[0]; // SqGrid
-         var ChartNo = array[1]; // ChartNo
+        // var SqGrid =array[0]; // SqGrid
+        //var ChartNo = array[1]; // ChartNo
+
+
+               //test 
+
+        var SqGrid = '3'; // SqGrid
+        var ChartNo ='12165262'; // ChartNo
             
     </script>
 
@@ -20,6 +29,7 @@
 </head>
 <body>
     <form method="post" id="fm">
+        <input type="hidden" value="" name="Action" id="Action" />
         <input type="hidden" value="" name="SqGrid" id="SqGrid" />
         <input type="hidden" value="" name="ChartNo" id="ChartNo" />
         <input type="hidden" value="" name="OutpatientSn" id="OutpatientSn" />
@@ -42,14 +52,14 @@
             dataType: "json",
             data: JSON.stringify({ SqGrid: SqGrid, ChartNo: ChartNo }),
             success: function (data) {
-
+                //alert(JSON.stringify(data.d));
                 var json = $.parseJSON(data.d);
                 $(json).each(function (i, val) {
                     $.each(val, function (k, v) {
                         $('#' + k + '').val($.trim(v));
                     });
                 });
-
+                $('#Action').val("SetData");
                 var url = "Surveys/" + $('#QuestId').val() + ".aspx";
                 //依據SqGrid導頁到對應的問卷
                 $('#fm').attr('action', url);

@@ -9,18 +9,54 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>SDM - [Dashboard]</title>
 
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" />
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!--<link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" />-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> <!--字型與圖示-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/DataTables-1.min.css" rel="stylesheet" />
+    <style>
+
+        .tooltip {
+            position: absolute;
+            z-index: 1020;
+            display: block;
+            visibility: visible;
+            padding: 5px;
+            font-size: 13px;
+            opacity: 0;
+            filter: alpha(opacity=0)
+        }
+
+            .tooltip.in {
+                opacity: .9;
+                filter: alpha(opacity=80)
+            }
+
+        .tooltip-inner {
+            /*width: 350px;*/
+            padding: 3px 8px;
+            color: #808080;
+            text-align: center;
+            background: #FFF;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #314A5B;
+        }
+
+        .tooltip-arrow {
+            position: absolute;
+            width: 0;
+            height: 0
+        }
+    </style>
 
 </head>
 
@@ -33,11 +69,14 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="tables.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SDM INT <sup>V1.0</sup></div>
+                <div class="sidebar-brand-text mx-3">
+                    SDM INT
+                    <sup>V1.0</sup>
+                </div>
             </a>
 
             <!-- Divider -->
@@ -45,7 +84,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -55,12 +94,11 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!--<div class="sidebar-heading">
                 Interface
-            </div>
-
+            </div>-->
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Components</span>
@@ -72,10 +110,9 @@
                         <a class="collapse-item" href="cards.html">Cards</a>
                     </div>
                 </div>
-            </li>
-
+            </li>-->
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
@@ -89,18 +126,15 @@
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
-            </li>
-
+            </li>-->
             <!-- Divider -->
-            <hr class="sidebar-divider">
-
+            <!--<hr class="sidebar-divider">-->
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!--<div class="sidebar-heading">
                 Addons
-            </div>
-
+            </div>-->
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
@@ -117,27 +151,21 @@
                         <a class="collapse-item" href="blank.html">Blank Page</a>
                     </div>
                 </div>
-            </li>
-
+            </li>-->
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <!--<li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span>
                 </a>
-            </li>
-
+            </li>-->
             <!-- Nav Item - Tables -->
-            <li class="nav-item active">
+            <!--<li class="nav-item active">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span>
                 </a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
+            </li>-->
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -202,7 +230,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="ssoUserName"></span>
-                                <img class="img-profile rounded-circle" src="/favicon.ico">
+                                <img class="img-profile rounded-circle" src="favicon.ico">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -246,25 +274,25 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>QuestID</th>
-                                            <th>QuestName</th>
-                                            <th>ModifiedUser</th>
-                                            <th>ModifiedTime</th>
-                                            <th>CreaterUser</th>
-                                            <th>CreateTime</th>
-                                            <th>Dc</th>
+                                            <th>主題代號</th>
+                                            <th>主題名稱</th>
+                                            <th>開立醫囑數</th>
+                                            <th>填寫問卷數</th>
+                                            <th>主題生效日</th>
+                                            <th>APP</th>
+                                         
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>#</th>
-                                            <th>QuestID</th>
-                                            <th>QuestName</th>
-                                            <th>ModifiedUser</th>
-                                            <th>ModifiedTime</th>
-                                            <th>CreaterUser</th>
-                                            <th>CreateTime</th>
-                                            <th>Dc</th>
+                                            <th>主題代號</th>
+                                            <th>主題名稱</th>
+                                            <th>開立醫囑數</th>
+                                            <th>填寫問卷數</th>
+                                            <th>主題生效日</th>
+                                            <th>APP</th>
+
                                         </tr>
                                     </tfoot>
                                 </table>
@@ -315,47 +343,16 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document" style="max-width: 80% !important;max-height: 80% !important;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    <p>One fine body…</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <!--Show Window-->
+    <!--Show Data Window-->
     <script type="text/template" id="modal-template">
-        <div class="modal centered-modal" id="dynamicallyInjectedModal" tabindex="-1" role="dialog" aria-labelledby="modal-title">
-            <div class="modal-dialog modal-vertical-centered" role="document" style="width:<%= width %>;height:<%= height %>;">
-                <div class="modal-content">
-                    <div class="modal-header">
+        <div class="modal fade" id="dynamicallyTablesdModal" tabindex="-1" role="dialog" aria-labelledby="modal-title">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 100% !important;height: 98% !important;margin-top:20px;margin-left:20px;">
+                <div class="modal-content card mb-4">
+                    <div class="modal-header card-header">
+                        <h5 class="modal-title" id="modal-title"><%= title %></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="modal-title">
-                            <%= title %>
-                            <span id="iframe-loading" class="text-muted small" style="display:none;margin-left:1em;">正在加载...</span>
-                        </h4>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body card-body">
                         <iframe id="modal-iframe" src="<%= url %>" frameborder="0" backgrond="black"></iframe>
                     </div>
                 </div>
@@ -375,9 +372,7 @@
     <!-- Page level plugins -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="js/underscore-min.js"></script>
-    <script src="js/backbone-min.js"></script>
-
-
+    <!--<script src="js/backbone-min.js"></script>-->
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
     <script src="js/DataTables-1.js"></script>
@@ -393,6 +388,9 @@
                 success: function (data) {
                     var datatableVariable = $('#dataTable').DataTable({
                         data: $.parseJSON(data.d),
+                        pageLength: 15,
+                        retrieve: true,
+                        destroy: true,
                         columns: [
 
                             {
@@ -402,25 +400,59 @@
                                 render: function (data, type, row, meta) {
                                     //row指的是資料列物件 data變數相等於row.sysid
                                     //var html = "<input type='button' onclick=\"ShowData('" + data + "')\" value='SHOW' />";
+                                    //var html = "<a class='btn btn-light btn-icon-split btn-sm trigger-modal' role='button' data-url='MasterList.html?id=" + data.trim() + "' data-width='100%' data-height='100%'>";
+                                    //    html += "<span class='icon text-gray-600'><i class='fas fa-arrow-right'></i></span>";
+                                    //    html += "<span class='text'>個案查詢</span></a>";
+
+                                    var html = "<a role='button' data-toggle='tooltip' data-placement='top'  data-html='true'  title='依據<u><b>個案</b></u>統計管理' class='btn btn-outline-info btn-sm trigger-modal tool-tip' data-url='CaseBoard.html?id=" + data.trim() + "' data-width='100%' data-height='100%' data-divId='dynamicallyTablesdModal'  data-text='" + row.QuestID.trim() + "-" + row.QuestName.trim() + "'>Show Case</a>&nbsp;";
+                                    html += "<a role='button'  data-toggle='tooltip' data-placement='top' title='產生與匯出問卷明細' class='btn btn-outline-success btn-sm trigger-modal tool-tip' data-url='RawDataBoard.html?id=" + data.trim() + "' data-width='100%' data-height='100%' data-divId='dynamicallyTablesdModal' data-text='" + row.QuestID.trim() + "-" + row.QuestName.trim() + "'>RAW DATA</a>";
+                                    //var html = '<a data-toggle="modal" href="#example2" class="btn btn-primary btn-large">' + data + '</a>';
+                                    //var html = "<a href='MasterList.html?id=" + data.trim() + "' data-toggle='modal' data-target='#myModal'>個案查詢</a>";
+                                    //var html ="<a href='#' data-toggle='modal' data-load-url='MasterList.html?id="+data.trim()+"' data-target='#myModal'>Click me</a>"
+                                    // var html ="<a href='#' data-toggle='modal' data-load-url='Close.html' data-target='#myModal'>Click me</a>"
 
 
-                                    //var html = "<a class='btn btn-default btn-lg trigger-modal' role='button' data-url='MasterList.html?id=" + data.trim() + "' data-width='100%' data-height='100%' >個案查詢</a>";
-
-                                    var html = "<a href='MasterList.html?id=" + data.trim() + "' data-toggle='modal' data-target='#myModal'>個案查詢</a>";
-                                    //var html = "<a href='Close.html' data-toggle='modal' data-target='#myModal'>個案查詢</a>";
-
-
-                                    return html;
+                                    //return html;
+                                    return (row.Status.trim() == 'E')? html: '';
 
                                 }
                             },
 
                             { 'data': 'QuestID' },
                             { 'data': 'QuestName' },
-                            { 'data': 'ModifiedUser' },
-                            { 'data': 'ModifiedTime' },
-                            { 'data': 'CreaterUser' },
-                            { 'data': 'CreateTime' },
+                            {
+                                data: 'OpenCount',//資料行繫結屬性
+                                orderable: false, // 禁用排序
+                                render: function (data, type, row, meta) {
+                                    var html = "<span style='color:blue'>" + data + "</span>";
+
+                                    return (data > 0) ? html : data;
+
+                                }
+                            },
+                            {
+                                data: 'WriteCount',//資料行繫結屬性
+                                orderable: false, // 禁用排序
+                                render: function (data, type, row, meta) {
+                                    var html = "<span style='color:red'>" + data + "</span>";
+                                    return (data > 0) ? html : data;
+                                }
+                            },
+                            { 'data': 'EffectDate' },
+                            
+                            {
+                                data: 'Status',//資料行繫結屬性
+                                orderable: false, // 禁用排序
+                                render: function (data, type, row, meta) {
+                                    var html = "<div class='btn btn-light btn-sm'><strong>online</strong></div>";
+
+                                    return (data.trim() == 'E')? html: '';
+
+                                }
+                            },
+
+
+
                             //{
                             //    'data': 'CreateTime', 'render': function (date) {
                             //        var date = new Date(parseInt(date.substr(6)));
@@ -428,9 +460,9 @@
                             //        return date.getDate() + "/" + month + "/" + date.getFullYear();
                             //    }
                             //},
-                            { 'data': 'Dc' }
+                            //{ 'data': 'Dc' }
                         ],
-                        order: [[0, "asc"]]
+                        order: [[1, "asc"]]
                         //,
                         //dom: 'Bfrtip',
                         //buttons: [
@@ -441,6 +473,30 @@
                         //    }, 'excel','pdf', 'print'
                         //]
                     });
+                    /*  datatable 無法使用 bookstep 4的 tooltip工具,須自己寫*/
+
+                    // Tooltip Initializations
+                    ToolTipStyling = function () {
+                        $('.tool-tip,[data-toggle="tooltip"]').tooltip({
+                            container: 'body',
+                            animation: true,
+                            delay: {
+                                show: 100,
+                                hide: 100
+                            }
+                        });
+                    };
+
+                    ToolTipStyling();
+
+                    $('table').on('post-body.bs.table', function () {
+                        ToolTipStyling();
+                    });
+
+                    tooltipTitleSetter = function (that) {
+                        return $(that).val() === "" ? ' ' : $(that).val();
+                    };
+                    //......***End
 
                     $('#dataTable tfoot th').each(function () {
                         var placeHolderTitle = $('#dataTable thead th').eq($(this).index()).text();
@@ -456,36 +512,41 @@
                         var tableColumn = datatableVariable.column($(this).attr('data-columnindex'));
                         tableColumn.visible(!tableColumn.visible());
                     });
+
                 }
 
             });
-
-
-
         }
 
         $(document).ready(function () {
-            //load session
-            $.ajax({
-                type: "post",
-                url: "ServicePortal.asmx/ShowSession",
-                success: function (response) {
-                    alert($(response).find("string")[0].textContent);
-                    var str = $(response).find("string")[0].textContent;
-                    var array = str.split("_");
-                    var userId = array[0];
-                    var userName = array[1];
 
-                    if (userId == '0') {
-                        window.location.href = 'login.html';
-                    } else {
-                        $("#ssoUserName").html("[" + userId + "] " + userName);
-                        query();
-                    }
+            // pord
+
+            //load session 登入驗證
+            //$.ajax({
+            //    type: "post",
+            //    url: "ServicePortal.asmx/ShowSession",
+            //    success: function (response) {
+            //        //alert($(response).find("string")[0].textContent);
+            //        var str = $(response).find("string")[0].textContent;
+            //        var array = str.split("_");
+            //        var userId = array[0];
+            //        var userName = array[1];
+
+            //        if (userId == '0') {
+            //            window.location.href = 'login.html';
+            //        } else {
+            //            $("#ssoUserName").html("[" + userId + "] " + userName);
+            //            query();
+            //        }
 
 
-                }
-            });
+            //    }
+            //});
+
+            //test
+            query();
+
 
         })
 

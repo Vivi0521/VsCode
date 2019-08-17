@@ -2242,7 +2242,7 @@
 		float: left;
 	}
 
-		input[type="checkbox"] + label,
+		/*input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
 			color: #585858;
@@ -2292,15 +2292,15 @@
 		input[type="radio"]:focus + label:before {
 			border-color: #f2849e;
 			box-shadow: 0 0 0 1px #f2849e;
-		}
+		}*/
 
 	input[type="checkbox"] + label:before {
 		border-radius: 4px;
 	}
 
-	input[type="radio"] + label:before {
+	/*input[type="radio"] + label:before {
 		border-radius: 100%;
-	}
+	}*/
 
 /* Box */
 

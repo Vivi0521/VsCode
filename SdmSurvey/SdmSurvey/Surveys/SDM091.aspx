@@ -26,15 +26,22 @@
     <link rel="stylesheet" href="../Resource/assets/css/inputNumber.css" />
 
     <% 
-        string SqGrid = Request.Form["SqGrid"];  //outpatient_sn
+        string Action = Request.Form["Action"];  //action GatData, SetData
+        string SqGrid = Request.Form["SqGrid"];  //SqGrid
         string DocNo = Request.Form["MainDrNo"];  // doctor_code
         string Sn = Request.Form["OutpatientSn"];  //outpatient_sn
         string ChNo = Request.Form["ChartNo"]; // chart_no
         string ChNe = Request.Form["PatientName"]; //patient_name
-        string OrderCode = Request.Form["SqGrid"]; //quest_no,Order_Code
+        string OrderCode = Request.Form["QuestId"]; //quest_no,Order_Code
         string IpAddress = Request.Form["IpAddress"]; //ipAddress
 
     %>
+    <style>
+        input[type=radio]{
+          transform:scale(1.5);
+        }
+
+    </style>
 </head>
 <body>
     <!-- Wrapper -->
@@ -638,7 +645,7 @@
                         <article class="style1">
                             <h3>步驟三、<span style="text-decoration: underline;">【治療模式接受度】:您對治療方式的接受度與認知有多少?</span></h3>
                             <p>您對治療方式的認知有多少？請試著回答下列問題:</p>
-                            <table style="width: 80%; margin: 0 auto;">
+                            <table style="width: 90%; margin: 0 auto;">
 
                                 <tr>
                                     <td style="width: 5%">1</td>
@@ -746,57 +753,57 @@
                         <article class="style1">
                             <h3>步驟四、<span style="text-decoration: underline;">【治療模式】 您現在確認好治療方式了嗎？</span></h3>
                             <p>(一).對治療模式的了解程度</p>
-                            <table style="width: 80%; margin: 0 auto;">
+                            <table style="width: 90%; margin: 0 auto;">
 
                                 <tr>
                                     <td style="width: 15%">1.知識</td>
-                                    <td style="width: 50%">你清楚每一項治療的風險與優勢嗎?</td>
+                                    <td style="width: 45%">你清楚每一項治療的風險與優勢嗎?</td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_1" value="1" />是
                                     </td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_1" value="2" />否
                                     </td>
-                                    <td style="width: 25%">
+                                    <td style="width: 30%">
                                         <input type="radio" name="41_1" value="3" />不確定
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="width: 15%">2.價值</td>
-                                    <td style="width: 50%">對你清楚每一項治療的風險與優勢，哪一個對你最重要?</td>
+                                    <td style="width: 45%">對你清楚每一項治療的風險與優勢，哪一個對你最重要?</td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_2" value="1" />是
                                     </td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_2" value="2" />否
                                     </td>
-                                    <td style="width: 25%">
+                                    <td style="width: 30%">
                                         <input type="radio" name="41_2" value="3" />不確定
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="width: 15%">3.支持</td>
-                                    <td style="width: 50%">你有足夠的支持系統來支持你的決策嗎?</td>
+                                    <td style="width: 45%">你有足夠的支持系統來支持你的決策嗎?</td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_3" value="1" />是
                                     </td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_3" value="2" />否
                                     </td>
-                                    <td style="width: 25%">
+                                    <td style="width: 30%">
                                         <input type="radio" name="41_3" value="3" />不確定
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="width: 15%">4.確定</td>
-                                    <td style="width: 50%">你確定這個選擇對你來說是最好的嗎?</td>
+                                    <td style="width: 45%">你確定這個選擇對你來說是最好的嗎?</td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_4" value="1" />是
                                     </td>
                                     <td style="width: 10%">
                                         <input type="radio" name="41_4" value="2" />否
                                     </td>
-                                    <td style="width: 25%">
+                                    <td style="width: 30%">
                                         <input type="radio" name="41_4" value="3" />不確定
                                     </td>
                                 </tr>
@@ -844,6 +851,7 @@
                             -->
                             </div>
                             <div>
+                                <input type="hidden" id="h_action" name="h_action" value="<%=Action%>" />
                                 <input type="hidden" id="h_ChNo" name="h_ChNo" value="<%=ChNo%>" />
                                 <input type="hidden" id="h_Sn" name="h_Sn" value="<%=Sn%>" />
                                 <input type="hidden" id="h_DocNo" name="h_DocNo" value="<%=DocNo%>" />
@@ -870,7 +878,7 @@
     <!-- Scripts -->
     <script>
 
-
+        //order question
         $("#inputNumber").on("keydown", function (event) {
             var event = event.which ? event.which : window.event.keyCode;
             if (event == 8 || event == 9 || event == 109 || event == 110 || (event >= 48 && event <= 57) || (event >= 96 && event <= 105)) {
@@ -882,10 +890,11 @@
 
         $("#h_ref").val($('#p_ref option:selected').val());
 
+
         function doSubmit() {
             $.ajax({
                 type: "POST",
-                url: "SDM091_Handler.ashx",
+                url: "SDM091_Handler.ashx?action=SetData",
                 data: ({
                     q: $('#cad_form').serialize()
                 }),
@@ -899,6 +908,48 @@
                 }
             });
         }
+        function getDate() {
+            $.ajax({
+                type: "POST",
+                url: "SDM091_Handler.ashx?action=GetData",
+                data: ({
+                    SqGrid: $('#h_SqGrid').val()
+                }),
+                success: function (data) {
+                    alert(data);
+
+                    //var json = $.parseJSON(data.d);
+                    //$(json).each(function (i, val) {
+                    //    $.each(val, function (k, v) {
+                    //        $('#' + k + '').val($.trim(v));
+                    //    });
+                    //});
+
+
+
+
+                }
+            });
+
+
+
+        }
+
+        $(document).ready(function () {
+            if ($('#h_action').val() == 'GetData') {
+                //View 
+                $('input[type=submit]').hide();
+                $("input").attr("disabled", "disabled");
+                //塞入資料
+                getDate();
+            } else {
+                $('input[type=submit]').show();
+            }
+
+
+
+
+        });
     </script>
 </body>
 </html>

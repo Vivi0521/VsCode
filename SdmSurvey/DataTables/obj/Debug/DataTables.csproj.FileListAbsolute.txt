@@ -4,3 +4,4 @@ D:\Git_Vs\SdmSurvey\DataTables\bin\DataTables.pdb
 D:\Git_Vs\SdmSurvey\DataTables\obj\Debug\DataTables.csproj.CoreCompileInputs.cache
 D:\Git_Vs\SdmSurvey\DataTables\obj\Debug\DataTables.dll
 D:\Git_Vs\SdmSurvey\DataTables\obj\Debug\DataTables.pdb
+D:\Git_Vs\SdmSurvey\DataTables\obj\Debug\DataTables.csprojAssemblyReference.cache

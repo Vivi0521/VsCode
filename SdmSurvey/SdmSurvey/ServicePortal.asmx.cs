@@ -49,7 +49,7 @@ namespace SdmSurvey
                     //
                     // Create new SqlCommand object.
                     //
-                    using (SqlCommand command = new SqlCommand("select * From sdm.SDM_Question_master where SQ_GRID=@SqGrid", connection))
+                    using (SqlCommand command = new SqlCommand("select * From SDM_Question_master where SQ_GRID=@SqGrid", connection))
                     {
                         command.Parameters.AddWithValue("@SqGrid", SqGrid);
                         //
@@ -58,7 +58,7 @@ namespace SdmSurvey
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            ms.SqGRID = Convert.ToString(reader["SQ_GRID"]);
+                            ms.SqGrid = Convert.ToString(reader["SQ_GRID"]);
                             ms.ChartNo = Convert.ToString(reader["Chart_No"]);
                             ms.OutpatientSn = Convert.ToString(reader["Outpatient_Sn"]);
                             ms.PatientName = Convert.ToString(reader["Patient_Name"]);
@@ -97,7 +97,7 @@ namespace SdmSurvey
                     //
                     // Create new SqlCommand object.
                     //
-                    using (SqlCommand command = new SqlCommand("select * From sdm.SDM_Question_master where SQ_GRID=@SqGrid and Chart_No=@ChartNo ", connection))
+                    using (SqlCommand command = new SqlCommand("select * From SDM_Question_master where SQ_GRID=@SqGrid and Chart_No=@ChartNo ", connection))
                     {
                         command.Parameters.AddWithValue("@SqGrid", SqGrid);
                         command.Parameters.AddWithValue("@ChartNo", ChartNo);
@@ -107,7 +107,7 @@ namespace SdmSurvey
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            ms.SqGRID = Convert.ToString(reader["SQ_GRID"]);
+                            ms.SqGrid = Convert.ToString(reader["SQ_GRID"]);
                             ms.ChartNo = Convert.ToString(reader["Chart_No"]);
                             ms.OutpatientSn = Convert.ToString(reader["Outpatient_Sn"]);
                             ms.PatientName = Convert.ToString(reader["Patient_Name"]);
@@ -145,6 +145,13 @@ namespace SdmSurvey
 
 
 
+
+
+
+
+
+
+        //[WebMethod]
         [WebMethod(EnableSession =true)]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public string Verification(UserInfo userInfo) {

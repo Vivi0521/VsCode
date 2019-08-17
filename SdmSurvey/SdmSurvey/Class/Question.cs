@@ -14,6 +14,10 @@ namespace SdmSurvey.Class
         public string CreaterUser { get; set; }
         public string CreateTime { get; set; }
         public string Dc { get; set; }
+        public int OpenCount { get; set; }
+        public int WriteCount { get; set; }
+        public string EffectDate { get; set; }
+        public string Status { get; set; }
 
     }
 }
