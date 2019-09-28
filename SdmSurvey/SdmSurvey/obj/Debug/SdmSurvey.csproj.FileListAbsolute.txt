@@ -14,6 +14,7 @@ D:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.pdb
 D:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.csproj.CopyComplete
 D:\Git_Vs\SdmSurvey\SdmSurvey\bin\log4net.dll
 D:\Git_Vs\SdmSurvey\SdmSurvey\bin\log4net.xml
+<<<<<<< HEAD
 D:\Git_Vs\SdmSurvey\SdmSurvey\bin\Dapper.dll
 D:\Git_Vs\SdmSurvey\SdmSurvey\bin\Dapper.xml
 D:\Git_Vs\SdmSurvey\SdmSurvey\bin\Newtonsoft.Json.dll
@@ -31,3 +32,5 @@ F:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.csproj.CopyComplete
 F:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.dll
 F:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.pdb
 F:\Git_Vs\SdmSurvey\SdmSurvey\obj\Debug\SdmSurvey.csprojAssemblyReference.cache
+=======
+>>>>>>> bdbd8b817962d062c335c2e12c82847b139127d6
