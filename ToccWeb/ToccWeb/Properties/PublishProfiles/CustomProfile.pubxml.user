@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+此檔案由您的 Web 專案發佈/封裝處理序使用。您可以藉由編輯此 MSBuild 檔案，
+自訂此處理序的行為。若要深入了解，請前往 https://go.microsoft.com/fwlink/?LinkID=208121。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\pub_vs\ToccWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/03/2020 09:59:32</publishTime>
+    </File>
+    <File Include="bin/ToccWeb.dll">
+      <publishTime>03/12/2020 15:16:54</publishTime>
+    </File>
+    <File Include="bin/ToccWeb.pdb">
+      <publishTime>03/12/2020 15:16:54</publishTime>
+    </File>
+    <File Include="Dou6QueryID.aspx">
+      <publishTime>03/10/2020 14:32:30</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>03/12/2020 15:16:54</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataSet.datasource">
+      <publishTime>03/03/2020 09:59:32</publishTime>
+    </File>
+    <File Include="Properties/DataSources/System.Data.DataTable.datasource">
+      <publishTime>03/03/2020 09:59:32</publishTime>
+    </File>
+    <File Include="QueryID.aspx">
+      <publishTime>03/10/2020 14:45:42</publishTime>
+    </File>
+    <File Include="Resource/css/main.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/css/util.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/HELP-US-OUT.txt">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/animated.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/core.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/icons.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/larger.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/list.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/path.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/less/variables.less">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/hero_1.jpg">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/hero_2.jpg">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/icons/favicon.ico">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/logo.png">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/logo_dou6.png">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/images/Thumbs.db">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/js/main.js">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/animate/animate.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/animsition/css/animsition.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/animsition/css/animsition.min.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/animsition/js/animsition.js">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/animsition/js/animsition.min.js">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-grid.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-reboot.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap.css.map">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap.min.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/css/bootstrap.min.css.map">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/js/bootstrap.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/js/bootstrap.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/js/popper.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/js/popper.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/bootstrap/js/tooltip.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/countdowntime/countdowntime.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/css-hamburgers/hamburgers.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/css-hamburgers/hamburgers.min.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/daterangepicker/daterangepicker.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/daterangepicker/daterangepicker.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/daterangepicker/moment.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/daterangepicker/moment.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/jquery/jquery-3.2.1.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/perfect-scrollbar/perfect-scrollbar.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/perfect-scrollbar/perfect-scrollbar.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/select2/select2.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/select2/select2.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/select2/select2.min.css">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Resource/vendor/select2/select2.min.js">
+      <publishTime>03/10/2020 12:05:34</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.4.1.min.js">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Scripts/pidCheck.js">
+      <publishTime>03/10/2020 12:05:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/12/2020 15:16:54</publishTime>
+    </File>
+    <File Include="WebService.asmx">
+      <publishTime>03/03/2020 09:59:32</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

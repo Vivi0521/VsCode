@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetDataSet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FunctionCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="var1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="var2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="var3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="var4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="var5" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataSetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataSetResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSummaryRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSummaryRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSummaryRequestNoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestNoBCST">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sRequestNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iLayer" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRequestNoBCSTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRequestNoBCSTResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XMLOutCom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rptStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="div" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rptGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wkno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="XMLOutComResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="XMLOutComResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunSPQueryService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="system_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="function_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="begin_Time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="end_Time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="chart_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="req_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ccode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ord_state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tech_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="image_count" type="xs:int" />
+        <xs:element minOccurs="0" name="study_uid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="exec_doc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunSPQueryServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RunSPQueryServiceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRobotSQLStr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="functionName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Var1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Var2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Var3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Var4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Var5" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRobotSQLStrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRobotSQLStrResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PacsGetLISODOR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="system_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="function_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="begin_time" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="end_time" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Chart_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Req_no" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PacsGetLISODORResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PacsGetLISODORResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamReportDataByRequestNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExamReportDataByRequestNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetExamReportDataByRequestNoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXRayReportByChartNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beginTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXRayReportByChartNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXRayReportByChartNoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXRayUploadTimeByChartNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beginTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXRayUploadTimeByChartNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetXRayUploadTimeByChartNoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVitalSignsByChartNo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="chartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="beginTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVitalSignsByChartNoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVitalSignsByChartNoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCloudTravelHistoryByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCloudTravelHistoryByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCloudTravelHistoryByIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPatientDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComeInHospitalReason">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetComeInHospitalReasonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetComeInHospitalReasonResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveComeInHospitalReasonAndTravelHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveComeInHospitalReasonAndTravelHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveComeInHospitalReasonAndTravelHistoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

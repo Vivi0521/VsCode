@@ -1,0 +1,310 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B3EA85C-A1EB-49AC-BA9A-37C7C32F8266}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToccWeb</RootNamespace>
+    <AssemblyName>ToccWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wcfDou6\BusinessLogic.wsdl" />
+    <None Include="Connected Services\wcfDou6\BusinessLogic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcfDou6\BusinessLogic1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcfDou6\BusinessLogic2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcfDou6\BusinessLogic3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcf\BusinessLogic.wsdl" />
+    <None Include="Connected Services\wcf\BusinessLogic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcf\BusinessLogic1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcf\BusinessLogic2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\wcf\BusinessLogic3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Connected Services\wcfDou6\BusinessLogic.disco" />
+    <None Include="Connected Services\wcfDou6\configuration91.svcinfo" />
+    <None Include="Connected Services\wcfDou6\configuration.svcinfo" />
+    <None Include="Connected Services\wcfDou6\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\wcf\BusinessLogic.disco" />
+    <Content Include="Dou6QueryID.aspx" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="Resource\images\Thumbs.db" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\wcf\configuration91.svcinfo" />
+    <None Include="Connected Services\wcf\configuration.svcinfo" />
+    <None Include="Connected Services\wcf\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="QueryID.aspx" />
+    <Content Include="Resource\css\main.css" />
+    <Content Include="Resource\css\util.css" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Resource\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="Resource\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="Resource\images\hero_1.jpg" />
+    <Content Include="Resource\images\hero_2.jpg" />
+    <Content Include="Resource\images\icons\favicon.ico" />
+    <Content Include="Resource\images\logo.png" />
+    <Content Include="Resource\images\logo_dou6.png" />
+    <Content Include="Resource\js\main.js" />
+    <Content Include="Resource\vendor\animate\animate.css" />
+    <Content Include="Resource\vendor\animsition\css\animsition.css" />
+    <Content Include="Resource\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Resource\vendor\animsition\js\animsition.js" />
+    <Content Include="Resource\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Resource\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resource\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Resource\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resource\vendor\bootstrap\js\popper.js" />
+    <Content Include="Resource\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Resource\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Resource\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Resource\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Resource\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Resource\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Resource\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Resource\vendor\daterangepicker\moment.js" />
+    <Content Include="Resource\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Resource\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Resource\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Resource\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Resource\vendor\select2\select2.css" />
+    <Content Include="Resource\vendor\select2\select2.js" />
+    <Content Include="Resource\vendor\select2\select2.min.css" />
+    <Content Include="Resource\vendor\select2\select2.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\pidCheck.js" />
+    <Content Include="WebService.asmx" />
+    <Content Include="Web.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\IdnoInfo.cs" />
+    <Compile Include="Connected Services\wcf\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\wcfDou6\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dou6QueryID.aspx.cs">
+      <DependentUpon>Dou6QueryID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dou6QueryID.aspx.designer.cs">
+      <DependentUpon>Dou6QueryID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryID.aspx.cs">
+      <DependentUpon>QueryID.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QueryID.aspx.designer.cs">
+      <DependentUpon>QueryID.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\wcf\" />
+    <WCFMetadataStorage Include="Connected Services\wcfDou6\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58425</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58425/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

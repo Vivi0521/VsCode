@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cde85db0-ecd6-4165-b856-d38713bd9acf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://hisweb.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BusinessLogic.xsd" MetadataType="Schema" ID="5242bd99-3b54-488f-9891-a81175a017af" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd2" />
+    <MetadataFile FileName="BusinessLogic1.xsd" MetadataType="Schema" ID="21276809-1270-48e7-b8c9-a1bece0059c9" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd0" />
+    <MetadataFile FileName="BusinessLogic.wsdl" MetadataType="Wsdl" ID="7b804273-3719-47ac-8229-7316d5da6f18" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?wsdl" />
+    <MetadataFile FileName="BusinessLogic2.xsd" MetadataType="Schema" ID="747803be-59a6-4925-83bd-d3a24277d120" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd1" />
+    <MetadataFile FileName="BusinessLogic.disco" MetadataType="Disco" ID="be73a776-c7cf-4e76-a481-0861a595d996" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?disco" />
+    <MetadataFile FileName="BusinessLogic3.xsd" MetadataType="Schema" ID="7fcddd22-e659-4e8e-a04f-1e051b989d46" SourceId="1" SourceUrl="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

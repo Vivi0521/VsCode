@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BusinessLogic" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBusinessLogic_GetDataSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSet" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetDataSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_UpdateSummaryRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSummaryRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_UpdateSummaryRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSummaryRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetRequestNoBCST_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestNoBCST" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetRequestNoBCST_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRequestNoBCSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_XMLOutCom_InputMessage">
+    <wsdl:part name="parameters" element="tns:XMLOutCom" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_XMLOutCom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:XMLOutComResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_RunSPQueryService_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunSPQueryService" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_RunSPQueryService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunSPQueryServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetRobotSQLStr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRobotSQLStr" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetRobotSQLStr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRobotSQLStrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_PacsGetLISODOR_InputMessage">
+    <wsdl:part name="parameters" element="tns:PacsGetLISODOR" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_PacsGetLISODOR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PacsGetLISODORResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetExamReportDataByRequestNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamReportDataByRequestNo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetExamReportDataByRequestNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExamReportDataByRequestNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetXRayReportByChartNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXRayReportByChartNo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetXRayReportByChartNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXRayReportByChartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetXRayUploadTimeByChartNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXRayUploadTimeByChartNo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetXRayUploadTimeByChartNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXRayUploadTimeByChartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetVitalSignsByChartNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVitalSignsByChartNo" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetVitalSignsByChartNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVitalSignsByChartNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetCloudTravelHistoryByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCloudTravelHistoryByID" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetCloudTravelHistoryByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCloudTravelHistoryByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetPatientData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientData" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetPatientData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetComeInHospitalReason_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComeInHospitalReason" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_GetComeInHospitalReason_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComeInHospitalReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_SaveComeInHospitalReasonAndTravelHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveComeInHospitalReasonAndTravelHistory" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessLogic_SaveComeInHospitalReasonAndTravelHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveComeInHospitalReasonAndTravelHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBusinessLogic">
+    <wsdl:operation name="GetDataSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetDataSet" message="tns:IBusinessLogic_GetDataSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetDataSetResponse" message="tns:IBusinessLogic_GetDataSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSummaryRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/UpdateSummaryRequestNo" message="tns:IBusinessLogic_UpdateSummaryRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/UpdateSummaryRequestNoResponse" message="tns:IBusinessLogic_UpdateSummaryRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestNoBCST">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetRequestNoBCST" message="tns:IBusinessLogic_GetRequestNoBCST_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetRequestNoBCSTResponse" message="tns:IBusinessLogic_GetRequestNoBCST_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="XMLOutCom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/XMLOutCom" message="tns:IBusinessLogic_XMLOutCom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/XMLOutComResponse" message="tns:IBusinessLogic_XMLOutCom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunSPQueryService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/RunSPQueryService" message="tns:IBusinessLogic_RunSPQueryService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/RunSPQueryServiceResponse" message="tns:IBusinessLogic_RunSPQueryService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRobotSQLStr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetRobotSQLStr" message="tns:IBusinessLogic_GetRobotSQLStr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetRobotSQLStrResponse" message="tns:IBusinessLogic_GetRobotSQLStr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PacsGetLISODOR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/PacsGetLISODOR" message="tns:IBusinessLogic_PacsGetLISODOR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/PacsGetLISODORResponse" message="tns:IBusinessLogic_PacsGetLISODOR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExamReportDataByRequestNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetExamReportDataByRequestNo" message="tns:IBusinessLogic_GetExamReportDataByRequestNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetExamReportDataByRequestNoResponse" message="tns:IBusinessLogic_GetExamReportDataByRequestNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXRayReportByChartNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetXRayReportByChartNo" message="tns:IBusinessLogic_GetXRayReportByChartNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetXRayReportByChartNoResponse" message="tns:IBusinessLogic_GetXRayReportByChartNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXRayUploadTimeByChartNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetXRayUploadTimeByChartNo" message="tns:IBusinessLogic_GetXRayUploadTimeByChartNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetXRayUploadTimeByChartNoResponse" message="tns:IBusinessLogic_GetXRayUploadTimeByChartNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVitalSignsByChartNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetVitalSignsByChartNo" message="tns:IBusinessLogic_GetVitalSignsByChartNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetVitalSignsByChartNoResponse" message="tns:IBusinessLogic_GetVitalSignsByChartNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCloudTravelHistoryByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetCloudTravelHistoryByID" message="tns:IBusinessLogic_GetCloudTravelHistoryByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetCloudTravelHistoryByIDResponse" message="tns:IBusinessLogic_GetCloudTravelHistoryByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetPatientData" message="tns:IBusinessLogic_GetPatientData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetPatientDataResponse" message="tns:IBusinessLogic_GetPatientData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComeInHospitalReason">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/GetComeInHospitalReason" message="tns:IBusinessLogic_GetComeInHospitalReason_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/GetComeInHospitalReasonResponse" message="tns:IBusinessLogic_GetComeInHospitalReason_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveComeInHospitalReasonAndTravelHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBusinessLogic/SaveComeInHospitalReasonAndTravelHistory" message="tns:IBusinessLogic_SaveComeInHospitalReasonAndTravelHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBusinessLogic/SaveComeInHospitalReasonAndTravelHistoryResponse" message="tns:IBusinessLogic_SaveComeInHospitalReasonAndTravelHistory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBusinessLogic" type="tns:IBusinessLogic">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataSet">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSummaryRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/UpdateSummaryRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRequestNoBCST">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetRequestNoBCST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XMLOutCom">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/XMLOutCom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunSPQueryService">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/RunSPQueryService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRobotSQLStr">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetRobotSQLStr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PacsGetLISODOR">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/PacsGetLISODOR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExamReportDataByRequestNo">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetExamReportDataByRequestNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXRayReportByChartNo">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetXRayReportByChartNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXRayUploadTimeByChartNo">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetXRayUploadTimeByChartNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVitalSignsByChartNo">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetVitalSignsByChartNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCloudTravelHistoryByID">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetCloudTravelHistoryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientData">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetPatientData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComeInHospitalReason">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/GetComeInHospitalReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveComeInHospitalReasonAndTravelHistory">
+      <soap:operation soapAction="http://tempuri.org/IBusinessLogic/SaveComeInHospitalReasonAndTravelHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusinessLogic">
+    <wsdl:port name="BasicHttpBinding_IBusinessLogic" binding="tns:BasicHttpBinding_IBusinessLogic">
+      <soap:address location="http://hc-ap2.hosp.ncku/HISService/LIS/WService/basic/BusinessLogic.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
